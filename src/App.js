@@ -5,11 +5,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <img src= {logo} className="App-logo" />
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
-        <code> Hello! We are still currently in the process 
-               of developing Maria Farelo's portfolio.
-        </code>
+           Hello there! <br/> 
+           This website is under construction...
         </p>
       </header>
     </div>
@@ -17,3 +16,4 @@ function App() {
 }
 
 export default App;
+
