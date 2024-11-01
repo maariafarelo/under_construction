@@ -8,20 +8,20 @@ function NavBar() {
       </div>
       <div className="navbar-right">
         <a
-          href="https://www.linkedin.com/in/your-linkedin" // Replace with your LinkedIn URL
+          href="https://www.linkedin.com/in/mariafareloiglesias/" 
           target="_blank"
           rel="noopener noreferrer"
         >
           LinkedIn
         </a>
         <a
-          href="https://github.com/your-github" // Replace with your GitHub URL
+          href="https://github.com/maariafarelo/"
           target="_blank"
           rel="noopener noreferrer"
         >
           GitHub
         </a>
-        <a href="mailto:your-email@example.com">Email</a> {/* Replace with your email */}
+        <a href="mailto:maria190504@gmail.com">Email</a>
       </div>
     </nav>
   );
