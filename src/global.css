@@ -26,17 +26,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: rgba(37, 38, 52, 0.32); /* Slightly transparent for better visibility */
-  width: 100%; /* Full width */
+  margin-top: 2%;
+  width: 80%; /* Full width */
 }
 
 .navbar-left {
   flex: 1;
   color: #ffffff;
-}
-
-.name {
-  margin: 0; /* Remove margin from heading */
 }
 
 .navbar-right {
