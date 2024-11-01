@@ -5,12 +5,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="Logo of Maria Farelo" />
-        <h1>
-          <code>Hello HOLAAA!</code> <br />
-          This portfolio is still in the <span className="highlight">coding lab</span>, <br />
-          good things take time to compile!
-        </h1>
         <p className="contact-info">
           <span>Connect with me:</span> <br />
           <a 
