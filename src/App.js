@@ -1,19 +1,10 @@
 import React from "react";
-import Intro from "./components/Intro";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import NavBar from "./components/NavBar";
-import "./App.css";
+import "./global.css";
 
 function App() {
   return (
-    <div className="App-header">
-      <NavBar></NavBar>
-      <div id="content">
-        <Intro></Intro>
-        <About></About>
-        <Projects></Projects>
-      </div>
+    <div className="App">
+      <h1 className="hello-text">Hello! Just starting to code...</h1>
     </div>
   );
 }

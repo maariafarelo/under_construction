@@ -1,0 +1,28 @@
+/* Color Variables */
+:root {
+  --dark-navy: #02041b; /* Background color */
+  --white: #ffffff; /* Text color */
+}
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply the dark navy background color */
+.App {
+  background-color: var(--dark-navy);
+  min-height: 100vh; /* Full height of the viewport */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+/* Styling for the text */
+.hello-text {
+  color: var(--white);
+  font-size: 4rem; /* Large font size */
+  font-family: Arial, sans-serif; /* You can change the font here */
+}
