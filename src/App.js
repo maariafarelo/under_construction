@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="Logo of Maria Farelo" />
         <h1>
-          <code>Hello there!</code> <br />
+          <code>Hello HOLAAA!</code> <br />
           This portfolio is still in the <span className="highlight">coding lab</span>, <br />
           good things take time to compile!
         </h1>
