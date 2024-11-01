@@ -11,18 +11,47 @@
   box-sizing: border-box;
 }
 
-/* Apply the dark navy background color */
+/* Main App styles */
 .App {
   background-color: var(--dark-navy);
   min-height: 100vh; /* Full height of the viewport */
   display: flex;
+  flex-direction: column;
   align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
 }
 
-/* Styling for the text */
-.hello-text {
-  color: var(--white);
-  font-size: 4rem; /* Large font size */
-  font-family: Arial, sans-serif; /* You can change the font here */
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(37, 38, 52, 0.32); /* Slightly transparent for better visibility */
+  width: 100%; /* Full width */
 }
+
+.navbar-left {
+  flex: 1;
+  color: #ffffff;
+}
+
+.name {
+  margin: 0; /* Remove margin from heading */
+}
+
+.navbar-right {
+  display: flex;
+  gap: 15px; /* Space between links */
+}
+
+.navbar-right a {
+  color: #ffffff; /* Link color */
+  text-decoration: none; /* No underline */
+  font-weight: bold;
+}
+
+.navbar-right a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+
