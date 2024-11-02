@@ -1,8 +1,8 @@
-/* Color Variables */
 :root {
   --background-color: #150d3b; /* Background color */
   --navbar-color: #150d3b;
   --white: #ffffff; /* Text color */
+  --secondary: #6dcaff; /* Custom secondary color for cursor */
 }
 
 /* Basic reset */
@@ -11,6 +11,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  cursor: none; /* Hide the default cursor */
+}
+
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, var(--secondary), rgba(109, 202, 255, 0.7));
+  border-radius: 50%;
+  pointer-events: none; /* Keep this */
+  transition: transform 0.1s ease;
+  z-index: 9999; /* Ensure it stays above other elements */
+}
+
+/* App styles, Navbar styles, Intro styles, etc. remain unchanged... */
 
 .App {
   padding-top: 60px; /* Adjust based on navbar height */
@@ -59,7 +76,82 @@
 }
 
 .navbar-right a:hover {
-  color: #a5a5a5; 
+  color: var(--secondary);
+}
+
+/*Intro stuff */
+.intro {
+  color: #F8F8F8; /* Light Gray */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  width: 50%; /* Wider for better readability */
+  text-align: center;
+  margin: 20px auto; /* Centering with automatic margins */
+  margin-top: 20%;
+  border-radius: 10px; /* Slightly rounded corners */
+  line-height: 1.5; /* Improves line spacing */
+}
+
+.intro::after {
+  content: ""; /* Adds a pseudo-element */
+  display: inline-block; /* Creates a new line for better justification */
+  height: 1.5em; /* Adjust height to match line height */
+}
+
+.intro-title {
+  color: #F8F8F8; /* Light Gray */
+  font-size: 3rem;
+  font-family: 'Inter', sans-serif; 
+}
+
+.intro-description {
+  color: #b7b7b7; 
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: NTR;
+}
+
+.highlighted-name {
+  color: var(--secondary); /* Change to your desired color */
+}
+
+.centered-text {
+  font-size: 1.3rem;
+  text-align: justify; /* Justify the text */
+  margin: 20px auto; 
+  max-width: 500px; 
+  line-height: 1.6; 
+  font-family: NTR;
+  font-weight: semi-bold;
 }
 
 
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .intro {
+      width: 80%; /* Wider on smaller screens */
+      padding: 20px; /* Less padding for small devices */
+  }
+
+  .intro-title {
+      font-size: 2rem; /* Smaller title for small screens */
+  }
+
+  .intro-description {
+      font-size: 1rem; /* Smaller description for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .intro {
+      width: 90%; /* Full width on very small screens */
+  }
+
+  .intro-title {
+      font-size: 1.5rem; /* Even smaller title for very small screens */
+  }
+
+  .intro-description {
+      font-size: 0.5rem; /* Smaller description for very small screens */
+  }
+}

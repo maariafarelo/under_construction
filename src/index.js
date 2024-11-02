@@ -11,6 +11,12 @@ root.render(
   </React.StrictMode>
 );
 
+document.addEventListener('mousemove', (e) => {
+  const cursor = document.querySelector('.cursor');
+  cursor.style.left = `${e.pageX}px`;
+  cursor.style.top = `${e.pageY}px`;
+});
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
