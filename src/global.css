@@ -22,10 +22,26 @@ body {
   height: 20px;
   background: radial-gradient(circle, var(--secondary), rgba(109, 202, 255, 0.7));
   border-radius: 50%;
-  pointer-events: none; /* Keep this */
-  transition: transform 0.1s ease;
+  pointer-events: none; /* Prevent interactions */
+  transition: transform 0.1s ease; /* Smooth movement */
   z-index: 9999; /* Ensure it stays above other elements */
 }
+
+.intro-container {
+  display: flex; /* Use flexbox to arrange items side by side */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space between text and image */
+}
+
+.profile-image {
+  width: 350px; /* Set width for the image */
+  margin-right: 20%;
+  margin-left: -50%;
+  margin-top: 5%;
+  height: auto; /* Keep aspect ratio */
+  border-radius: 10px; /* Optional: add some rounding */
+}
+
 
 /* App styles, Navbar styles, Intro styles, etc. remain unchanged... */
 
@@ -80,48 +96,87 @@ body {
 }
 
 /*Intro stuff */
+
 .intro {
   color: #F8F8F8; /* Light Gray */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  width: 50%; /* Wider for better readability */
-  text-align: center;
+  width: 75%; /* Increased from 50% to 55% */
+  text-align: left;
   margin: 20px auto; /* Centering with automatic margins */
-  margin-top: 20%;
+  margin-top: 10%;
   border-radius: 10px; /* Slightly rounded corners */
   line-height: 1.5; /* Improves line spacing */
 }
 
-.intro::after {
-  content: ""; /* Adds a pseudo-element */
-  display: inline-block; /* Creates a new line for better justification */
-  height: 1.5em; /* Adjust height to match line height */
-}
-
 .intro-title {
   color: #F8F8F8; /* Light Gray */
-  font-size: 3rem;
+  font-size: 3.3rem; /* Increased from 3rem to 3.3rem */
   font-family: 'Inter', sans-serif; 
 }
 
 .intro-description {
   color: #b7b7b7; 
-  font-size: 1.4rem;
+  font-size: 1.5rem; /* Increased from 1.4rem to 1.54rem */
   font-weight: bold;
   font-family: NTR;
 }
 
-.highlighted-name {
-  color: var(--secondary); /* Change to your desired color */
-}
-
 .centered-text {
-  font-size: 1.3rem;
+  font-size: 1.4rem; /* Default size */
   text-align: justify; /* Justify the text */
-  margin: 20px auto; 
-  max-width: 500px; 
-  line-height: 1.6; 
+  color: #b7b7b7;
+  margin: 20px 0; /* Top and bottom margin only */
+  max-width: 37%; /* Control the maximum width */
   font-family: NTR;
   font-weight: semi-bold;
+}
+
+
+
+.contact-button {
+  display: inline-block;
+  margin-top: 20px; /* Space above the button */
+  padding: 10px 20px; /* Padding inside the button */
+  color: white; /* Button text color */
+  background-color: var(--secondary); /* Use your secondary color */
+  border: none; /* No border */
+  border-radius: 5px; /* Slightly rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-family: NTR; /* Font family */
+  font-size: 1.5rem; /* Font size */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.contact-button:hover {
+  background-color: #488db2; /* Change to a darker shade on hover */
+}
+
+.intro-container {
+  display: flex; /* Use flexbox to arrange items side by side */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space between text and image */
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .centered-text {
+    font-size: 1.2rem; /* Adjust size for tablets */
+    max-width: 70%; /* Increase width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .centered-text {
+    font-size: 1rem; /* Further reduce for mobile */
+    max-width: 90%; /* Full width for very small screens */
+  }
+}
+
+
+
+.highlighted-name {
+  color: var(--secondary); /* Change to your desired color */
 }
 
 
