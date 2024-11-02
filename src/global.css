@@ -1,6 +1,7 @@
 /* Color Variables */
 :root {
-  --dark-navy: #121536; /* Background color */
+  --background-color: #150d3b; /* Background color */
+  --navbar-color: #150d3b;
   --white: #ffffff; /* Text color */
 }
 
@@ -11,43 +12,54 @@
   box-sizing: border-box;
 }
 
-/* Main App styles */
 .App {
-  background-color: var(--dark-navy);
-  min-height: 100vh; /* Full height of the viewport */
+  padding-top: 60px; /* Adjust based on navbar height */
+  background-color: var(--background-color);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center vertically */
+  align-items: center;
 }
 
 /* Navbar styles */
 .navbar {
+  font-family: NTR;
+  font-weight: 800;
+  line-height: 1.5;
+  background-color: var(--navbar-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  margin-top: 2%;
-  width: 80%; /* Full width */
+  width: 80%; 
+  margin-left: 10%;
+  margin-right: 10%;
+  position: fixed; /* Keep navbar fixed on the top */
+  top: 0; /* Position at the top of the viewport */
+  left: 0; /* Align to the left */
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
 .navbar-left {
   flex: 1;
-  color: #ffffff;
+  font-size: 1rem;
+  color: #d3d3d3;
 }
 
 .navbar-right {
   display: flex;
-  gap: 15px; /* Space between links */
+  gap: 10px; /* Space between links */
+  font-size: 0.9rem;
 }
 
 .navbar-right a {
-  color: #ffffff; /* Link color */
+  color: #e6e5e5; /* Link color */
   text-decoration: none; /* No underline */
   font-weight: bold;
 }
 
 .navbar-right a:hover {
-  text-decoration: underline; /* Underline on hover */
+  color: #a5a5a5; 
 }
 
 
