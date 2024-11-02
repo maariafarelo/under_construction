@@ -43,8 +43,6 @@ body {
 }
 
 
-/* App styles, Navbar styles, Intro styles, etc. remain unchanged... */
-
 .App {
   padding-top: 40px;
   background-color: var(--background-color);
@@ -120,11 +118,10 @@ body {
 }
 
 .centered-text {
-  font-size: 1.4rem; /* Default size */
-  text-align: justify; /* Justify the text */
+  font-size: 1.5rem; /* Default size */
   color: #b7b7b7;
   margin: 20px 0; /* Top and bottom margin only */
-  max-width: 37%; /* Control the maximum width */
+  max-width: 40%; /* Control the maximum width */
   font-family: NTR;
   font-weight: semi-bold;
 }
