@@ -13,13 +13,13 @@
 }
 
 body {
-  cursor: none; /* Hide the default cursor */
+  cursor: none; 
 }
 
 .cursor {
   position: fixed;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   background: radial-gradient(circle, var(--secondary), rgba(109, 202, 255, 0.7));
   border-radius: 50%;
   pointer-events: none; /* Prevent interactions */
@@ -46,7 +46,7 @@ body {
 /* App styles, Navbar styles, Intro styles, etc. remain unchanged... */
 
 .App {
-  padding-top: 60px; /* Adjust based on navbar height */
+  padding-top: 40px;
   background-color: var(--background-color);
   min-height: 100vh;
   display: flex;
@@ -64,12 +64,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  width: 80%; 
-  margin-left: 10%;
-  margin-right: 10%;
+  width:100%; 
   position: fixed; /* Keep navbar fixed on the top */
   top: 0; /* Position at the top of the viewport */
-  left: 0; /* Align to the left */
+  left: 2px; /* Align to the left */
+  right:2px;
   z-index: 1000; /* Ensure it stays above other content */
 }
 
