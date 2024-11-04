@@ -6,22 +6,20 @@ function AboutMe() {
   return (
     <div className="about-container">
       <div className="about">
-        <h2 className="about-title">About Me</h2>
+        <h2 className="about-title">about me</h2>
         <p className="centered-text">
           I’m a 20-year-old <span className="highlight"> Informatics Engineering student </span> 
           based in Barcelona, passionate about coding and continuous learning. I love diving 
-          into various programming languages like <span className="highlight">Python</span>,
-           <span className="highlight">JavaScript</span>, and <span className="highlight">C++
-            </span>, and I’m always eager to stay updated on the latest trends in software 
-            development, including web development frameworks, artificial intelligence, and 
-            machine learning.
+          into various programming languages like <span className="highlight">Python, Java,
+          Javascript or C++ </span> and I’m always eager to stay updated on the latest trends in software 
+          development, including web development frameworks, artificial intelligence, and 
+          machine learning.
         </p>
         <p className="centered-text">
-          As a hackathon enthusiast and <span className="highlight">organizer at HackUPC</span>,
+          I'm a hackathon enthusiast and an <span className="highlight">organizer at HackUPC</span>,
            I thrive in fast-paced environments where creativity meets collaboration. 
            Participating in hackathons around the world has sharpened my technical skills and 
-           enriched my problem-solving abilities. I take pride in creating spaces where 
-           like-minded individuals can come together and innovate.
+           enriched my problem-solving abilities. 
         </p>
         <p className="centered-text">
           In my free time, you can find me traveling, getting lost in a good book, or relaxing at
