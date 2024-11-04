@@ -60,8 +60,8 @@ function Intro() {
           creative solutions under pressure.
         </p>
         <div className="contact-buttons">
-          <a href="mailto:maria190504@gmail.com" className="contact-button">Say hi!</a>
-          <a href={curriculum} className="cv-button" download>Download CV</a>
+          <a href="mailto:maria190504@gmail.com" className="contact-button">email me!</a>
+          <a href={curriculum} className="cv-button" download>find my CV</a>
         </div>
       </div>
       <img src={profileImage} alt="Maria" className="profile-image" />

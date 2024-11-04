@@ -1,6 +1,5 @@
 /* Navbar styles */
 .navbar {
-    font-family: NTR;
     font-weight: 800;
     line-height: 1.5;
     background-color: var(--navbar-color);
@@ -17,12 +16,14 @@
   }
   
   .navbar-left {
+    font-family: 'Inter', sans-serif;
     flex: 1;
     font-size: 1rem;
-    color: #d3d3d3;
+    color:var(--secondary);
   }
   
   .navbar-right {
+    font-family: NTR;
     display: flex;
     gap: 10px; /* Space between links */
     font-size: 0.9rem;

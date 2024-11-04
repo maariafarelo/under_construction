@@ -16,7 +16,7 @@
   margin-top: 5%; /* Add some space at the top */
   border-radius: 10px; /* Optional: add some rounding */
   box-shadow: 0 4px 20px rgba(109, 202, 255, 0.5); /* Add shadow with a secondary color */
-  transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+  transition: transform 0.3s ease, width 0.3s ease; /* Smooth transition for scaling effect */
 }
 
 /* Scale effect on hover */
@@ -24,7 +24,6 @@
   transform: scale(1.1); /* Increase size on hover (10% larger) */
   animation: none; /* Remove the bounce animation on hover */
 }
-
 
 /* Add styles for the star animation */
 .star {
@@ -100,7 +99,7 @@
   margin: 20px 0; /* Top and bottom margin only */
   max-width: 40%; /* Control the maximum width */
   font-family: 'Inter', sans-serif;
-  font-weight: Semi-Bold; /* Ensure proper weight */
+  font-weight: semi-bold; /* Ensure proper weight */
 }
 
 .contact-buttons {
@@ -113,21 +112,23 @@
   margin-top: 20px; /* Space above the button */
   padding: 10px 20px; /* Padding inside the button */
   color: white; /* Button text color */
-  background-color: var(--secondary); /* Use your secondary color */
-  border: none; /* No border */
+  background-color: transparent; /* Make the background transparent */
+  border: 2px solid #488db2; /* Add a border with your secondary color */
   border-radius: 5px; /* Slightly rounded corners */
   text-decoration: none; /* Remove underline */
-  font-family: NTR; /* Font family */
-  font-size: 1.5rem; /* Font size */
-  transition: background-color 0.3s ease; /* Smooth background color transition */
+  font-family: 'Inter', sans-serif; /* Font family */
+  font-size: 1rem; /* Font size */
+  font-weight: bold; /* Button text weight */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth background color and color transition */
 }
 
 .contact-button:hover, .cv-button:hover {
-  background-color: #488db2; /* Change to a darker shade on hover */
+  background-color: #488db2; /* Change to your secondary color on hover */
+  color: white; /* Button text color on hover */
 }
 
 /* Responsive adjustments for small screens */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   /* Stack text and image vertically and center-align */
   .intro-container {
     flex-direction: column; /* Stack the intro and profile image */
@@ -137,8 +138,7 @@
   }
 
   .profile-image {
-    width: 80%; /* Set image to 80% of the screen width */
-    max-width: none; /* Remove max width restriction */
+    width: 30%; /* Set image to 60% of the screen width */
     margin: 20px 0; /* Add margin for spacing above and below */
   }
 
@@ -156,8 +156,9 @@
   }
 
   .intro-description, .centered-text {
-    font-size: 1.4rem; /* Smaller font for readability on mobile */
+    font-size: 1rem; /* Smaller font for readability on mobile */
     max-width: 100%; /* Remove max-width restriction */
+    justify-content: space-evenly;
   }
 
   /* Adjust contact button size */
@@ -178,3 +179,21 @@
   }
 }
 
+/* Responsive adjustments for medium screens */
+@media (max-width: 1024px) {
+  .profile-image {
+    width: 50%; /* Set image to 70% of the screen width */
+  }
+
+  .intro {
+    padding: 30px; /* Adjust padding for medium screens */
+  }
+
+  .intro-title {
+    font-size: 3rem; /* Slightly smaller font for medium screens */
+  }
+
+  .intro-description {
+    font-size: 1.2rem; /* Slightly smaller font for medium screens */
+  }
+}
