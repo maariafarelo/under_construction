@@ -121,12 +121,15 @@
   font-size: 1rem; /* Font size */
   font-weight: bold; /* Button text weight */
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth background color and color transition */
+  cursor: default; /* Set default cursor initially */
 }
 
 .contact-button:hover, .cv-button:hover {
   background-color: #488db2; /* Change to your secondary color on hover */
   color: white; /* Button text color on hover */
+  cursor: pointer; /* Ensure pointer on hover */
 }
+
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 1170px) {
