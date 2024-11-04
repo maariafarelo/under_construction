@@ -75,6 +75,6 @@
   }
 
   .centered-text {
-    font-size: 0.7rem; /* Even smaller description for very small screens */
+    font-size: 1rem; /* Even smaller description for very small screens */
   }
 }
