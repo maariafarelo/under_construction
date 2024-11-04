@@ -162,34 +162,48 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
 
-  .intro-container {
-    flex-direction: column; /* Stack sections vertically */
+  .intro {
+    flex-direction: column; 
     align-items: center;
     text-align: center;
     gap: 0;
-    width: 90vw; /* Make the container responsive */
     height: auto; /* Allow height to adjust */
   }
+
+  /* Center text on smaller devices */
   .intro-myname {
-    font-size: 1.2rem; /* Reduced size */
-    max-width: 100%;
+    margin-top: 30px;
+    text-align: center; /* Center text for smaller devices */
+    widht: 100%;
   }
 
   .intro-title {
-    font-size: 2rem; 
-    max-width: 100%; /* Further reduced size for very small screens */
+    text-align: center; /* Center text for smaller devices */
+    font-size: 2rem; /* Reduced size for smaller screens */
+    width: 100%;
   }
 
   .intro-description {
-    font-size: 0.8rem; 
+    font-size: 1.2rem; /* Reduced size */
+    font-display: none;
+    margin-top: 10px;
+    line-height: 1.2;
+  }
+
+  /* Adjust contact buttons layout for smaller devices */
+  .contact-buttons {
+    margin-top: 5px;
+    flex-direction: row; /* Keep buttons side by side */
+    align-items: center; /* Center buttons vertically */
+    justify-content: center; /* Center buttons within their container */
   }
 
   .profile-image {
     margin-top: 10%; /* Maintain margin above the image */
     max-width: 300%; /* Ensure the image can take full width */
-    width: 200px; /* Set a fixed width for the image on small devices */
+    width: 300px; /* Set a fixed width for the image on small devices */
   }
   .contact-button, .cv-button {
     width: 100%;
