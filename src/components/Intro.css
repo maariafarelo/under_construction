@@ -169,7 +169,8 @@
     align-items: center;
     text-align: center;
     gap: 0;
-    height: auto; /* Allow height to adjust */
+    height: auto;
+    width:auto; 
   }
 
   /* Center text on smaller devices */
@@ -203,7 +204,7 @@
   .profile-image {
     margin-top: 10%; /* Maintain margin above the image */
     max-width: 300%; /* Ensure the image can take full width */
-    width: 300px; /* Set a fixed width for the image on small devices */
+    width: 270px; /* Set a fixed width for the image on small devices */
   }
   .contact-button, .cv-button {
     width: 100%;
