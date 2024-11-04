@@ -1,0 +1,80 @@
+/* About container styling */
+.about-container {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center content horizontally */
+  height: 100vh; /* Set height to 100% of the viewport height */
+  text-align: center; /* Center text within the container */
+  padding: 20px; /* Optional padding */
+}
+
+/* About content section */
+.about {
+  z-index: 10; /* Ensure about content is above other elements */
+  width: 80%; /* Increased width for a more justified look */
+  max-width: 1200px; /* Optional: Set a max width to prevent stretching */
+  height: auto; /* Automatic height based on content */
+  margin: 20px; /* Centering with automatic margins */
+  padding: 40px; /* Padding to space out content */
+  border-radius: 10px; /* Slightly rounded corners */
+  line-height: 1.6; /* Improved line spacing */
+  background-color: #00000015; /* Semi-transparent background */
+  box-shadow: 2px 3px 20px var(--secondary); /* Shadow with the --secondary color */
+}
+
+/* Highlighted text styling */
+.highlight {
+  color: var(--secondary); /* Applies the secondary color to highlighted words */
+  font-weight: bold; /* Optional: Make the text bold */
+}
+
+/* About title styling */
+.about-title {
+  color: var(--secondary); /* Use a CSS variable for color */
+  font-size: 3.3rem; /* Font size for title */
+  font-family: 'Inter', sans-serif; 
+}
+
+/* Centered text styling */
+.centered-text {
+  font-size: 1.2rem; /* Font size for the centered text */
+  color: #ffffffe5; /* Light color for text */
+  margin: 20px 0; /* Top and bottom margin only */
+  max-width: 100%; /* Control the maximum width */
+  font-family: 'Inter', sans-serif; /* Font family */
+  font-weight: 500; /* Ensure proper weight */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1170px) {
+  .about-container {
+    flex-direction: column; /* Stack the about content vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 0 20px; /* Add padding to the sides */
+  }
+
+  .about {
+    width: 90%; /* Full width on small screens */
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .about-title {
+    font-size: 2.5rem; /* Smaller font for mobile */
+  }
+
+  .centered-text {
+    font-size: 1rem; /* Smaller font for readability on mobile */
+    max-width: 100%; /* Remove max-width restriction */
+  }
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 1000px) {
+  .about-title {
+    font-size: 2rem; /* Even smaller title for very small screens */
+  }
+
+  .centered-text {
+    font-size: 0.8rem; /* Even smaller description for very small screens */
+  }
+}

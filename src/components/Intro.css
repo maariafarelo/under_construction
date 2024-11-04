@@ -1,207 +1,187 @@
+/* Intro container with landscape aspect ratio */
 .intro-container {
-  display: flex; /* Use flexbox to arrange items side by side */
-  align-items: center; /* Align items vertically */
-  justify-content: space-between; /* Space between text and image */
-  overflow: hidden; /* Hide overflow for stars */
-  position: relative; /* Positioning context for absolute stars */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70vw; /* Set the width to 70% of the viewport width */
+  height: 45vw; /* Set the height to 45% of the viewport width for landscape */
+  max-width: 1200px; /* Optional: Limit the max width */
+  max-height: 675px; /* Optional: Limit the max height */
+  margin: auto; /* Center the container horizontally */
+  padding: 20px;
+  border-radius: 15px; /* Optional: Add rounded corners */
 }
 
-/* Profile image styles */
-.profile-image {
-  z-index: 10; /* Ensure the profile image is on top */
-  width: 100%; /* Set width to 100% to allow responsive scaling */
-  max-width: 350px; /* Keep the maximum width reasonable */
-  height: auto; /* Maintain the aspect ratio */
-  margin-right: 20%; /* Maintain spacing from the text */
-  margin-left: -50%; /* Adjust as needed */
-  margin-top: 5%; /* Add some space at the top */
-  border-radius: 10px; /* Optional: add some rounding */
-  box-shadow: 0 4px 20px rgba(109, 202, 255, 0.5); /* Add shadow with a secondary color */
-  transition: transform 0.3s ease, width 0.3s ease; /* Smooth transition for scaling effect */
+/* Intro content section */
+.intro-content {
+  width: 60%; /* Controls the width of the text section */
+  margin-bottom: 5%;
 }
 
-/* Scale effect on hover */
-.profile-image:hover {
-  transform: scale(1.1); /* Increase size on hover (10% larger) */
-  animation: none; /* Remove the bounce animation on hover */
-}
-
-/* Star styles */
-.star {
-  position: absolute;
-  background: rgba(46, 52, 85, 0.315); /* Pastel yellow color for stars with reduced opacity */
-  border-radius: 50%; /* Make them round */
-  width: 10px; /* Size of the stars */
-  height: 10px; /* Size of the stars */
-  animation: twinkle 1.5s infinite alternate, move 5s infinite alternate; /* Add movement */
-  box-shadow: 0 0 5px rgba(6, 3, 112, 0.299); /* Glow effect */
-  z-index: 1; /* Set a lower z-index for stars */
-}
-
-/* Keyframes for twinkle effect */
-@keyframes twinkle {
-  0% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Keyframes for movement */
-@keyframes move {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(10px, -10px); /* Move slightly up and to the right */
-  }
-  100% {
-    transform: translate(-10px, 10px); /* Move slightly down and to the left */
-  }
-}
-
-/* Existing intro styles */
-.intro {
-  z-index: 10; /* Ensure intro content is above stars */
-  width: 75%; /* Original width */
-  height: auto; /* Automatic height based on content */
-  text-align: left;
-  margin: 20px auto; /* Centering with automatic margins */
-  margin-top: 6%;
-  padding: 40px; /* Padding to space out content */
-  border-radius: 10px; /* Slightly rounded corners */
-  line-height: 1.6; /* Improved line spacing */
+/* Intro text styles */
+.intro-myname {
+  color: #e5e5e5a9;
+  font-size: 1rem; /* Further reduced size for my name */
+  font-family: 'Inter', sans-serif;
+  font-weight: bold; /* Ensure it's not bold */
+  text-align: left; /* Align text to the left for larger devices */
 }
 
 .intro-title {
   color: var(--secondary);
-  font-size: 3.3rem; /* Original font size */
-  font-family: 'Inter', sans-serif; 
+  font-size: 4rem; /* Reduced size */
+  font-family: 'Inter', sans-serif;
+  text-align: left; /* Align title to the left for larger devices */
 }
 
 .intro-description {
-  color: #e5e5e5; 
-  font-size: 1.5rem; /* Original font size */
-  font-weight: bold; /* Ensure text is bold */
-  font-family: NTR; /* Keep font family */
-  margin: 10px 0; /* Top and bottom margin for spacing */
-}
-
-.intro-myname {
   color: #e5e5e5;
-  font-size: 1rem; /* Original font size */
-  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem; /* Reduced size */
+  font-family: 'NTR', sans-serif;
 }
 
-.centered-text {
-  font-size: 1.2rem; /* Original font size */
-  color: #ffffffe5;
-  margin: 20px 0; /* Top and bottom margin only */
-  max-width: 40%; /* Control the maximum width */
-  font-family: 'Inter', sans-serif;
-  font-weight: semi-bold; /* Ensure proper weight */
-}
-
+/* Contact buttons */
 .contact-buttons {
-  display: flex; /* Use flexbox for button alignment */
+  display: flex; /* Keep the buttons in a row */
   gap: 10px; /* Space between buttons */
+  justify-content: center; /* Center buttons within their container */
 }
 
 .contact-button, .cv-button {
-  display: inline-block; /* Display as inline block */
-  margin-top: 20px; /* Space above the button */
-  padding: 10px 20px; /* Padding inside the button */
-  color: white; /* Button text color */
-  background-color: transparent; /* Make the background transparent */
-  border: 2px solid #488db2; /* Add a border with your secondary color */
-  border-radius: 5px; /* Slightly rounded corners */
-  text-decoration: none; /* Remove underline */
-  font-family: 'Inter', sans-serif; /* Font family */
-  font-size: 1rem; /* Font size */
-  font-weight: bold; /* Button text weight */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth background color and color transition */
-  cursor: default; /* Set default cursor initially */
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px; /* Increased padding for bigger buttons */
+  color: white;
+  background-color: transparent;
+  border: 2px solid #488db2;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem; /* Slightly larger button font size */
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
 }
 
 .contact-button:hover, .cv-button:hover {
-  background-color: #488db2; /* Change to your secondary color on hover */
-  color: white; /* Button text color on hover */
-  cursor: pointer; /* Ensure pointer on hover */
+  background-color: #488db2;
+  color: white;
 }
 
+/* Profile image section */
+.intro-image {
+  width: 40%; /* Controls the width of the image section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 1170px) {
-  .intro-container {
-    flex-direction: column; /* Stack the intro and profile image */
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center-align text */
-    padding: 0 20px; /* Add padding to the sides */
-  }
+.profile-image {
+  width: 100%;
+  max-width: 350px; /* Keeps image size consistent */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(109, 202, 255, 0.5);
+  transition: transform 0.3s ease, width 0.3s ease;
+}
 
-  .profile-image {
-    width: 70%; /* Set image to 70% of the screen width */
-    max-width: 300px; /* Maximum width for the image */
-    margin: 10px 0; /* Reduce margin for spacing */
-  }
+.profile-image:hover {
+  transform: scale(1.1);
+}
 
-  .intro {
-    width: 90%; /* Full width on small screens */
-    height: auto; /* Allow height to adjust based on content */
-    margin-top: 5%; /* Reduce top margin */
-    text-align: center; /* Center text within the intro section */
-    padding: 20px; /* Reduce padding for smaller screens */
+/* Responsive adjustments */
+@media (min-width: 1171px) { /* Increase font sizes for larger devices */
+  .intro-myname {
+    font-size: 1rem; /* Reduced size */
   }
 
   .intro-title {
-    font-size: 2.5rem; /* Smaller font for mobile */
-  }
-
-  .intro-description, .centered-text {
-    font-size: 1rem; /* Smaller font for readability on mobile */
-    max-width: 100%; /* Remove max-width restriction */
-    justify-content: space-evenly;
-  }
-
-  /* Adjust contact button size */
-  .contact-button, .cv-button {
-    font-size: 1rem; /* Maintain smaller font size */
-    padding: 8px 16px; /* Smaller padding */
-  }
-
-  .contact-buttons {
-    flex-direction: column; /* Stack buttons vertically on small screens */
-    align-items: center; /* Center align buttons */
-    gap: 10px; /* Space between buttons */
-  }
-
-  .contact-button, .cv-button {
-    width: 100%; /* Full width buttons */
-    max-width: 200px; /* Limit maximum width for consistency */
-  }
-}
-
-/* Additional responsive adjustments */
-@media (max-width: 1000px) {
-  .profile-image {
-    width: 90%; /* Set image to 90% of the screen width */
-  }
-
-  .intro {
-    padding: 15px; /* Further reduce padding for very small screens */
-  }
-
-  .intro-title {
-    font-size: 2rem; /* Even smaller title for very small screens */
+    font-size: 4rem; /* Consistent size */
   }
 
   .intro-description {
-    font-size: 0.8rem; /* Even smaller description for very small screens */
+    font-size: 1.5rem; /* Consistent size */
   }
 
-  
+  /* Center buttons to the left */
+  .contact-buttons {
+    justify-content: flex-start; /* Align buttons to the left */
+    width: 100%; /* Allow buttons to take full width for alignment */
+  }
 
+  .profile-image {
+    max-width: 400px; 
+    width: 100%;/* Make the image smaller on small devices */
+  }
+  .contact-button, .cv-button {
+    font-size: 1.2rem; /* Consistent button font size */
+    padding: 12px 24px; /* Consistent padding */
+  }
+}
 
+@media (max-width: 1170px) {
+  .intro-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+    text-align: center;
+    gap: 0;
+    width: 90vw; /* Make the container responsive */
+    height: auto; /* Allow height to adjust */
+  }
 
+  /* Center text on smaller devices */
+  .intro-myname {
+    text-align: center; /* Center text for smaller devices */
+  }
+
+  .intro-title {
+    text-align: center; /* Center text for smaller devices */
+    font-size: 3rem; /* Reduced size for smaller screens */
+  }
+
+  .intro-description {
+    font-size: 1.2rem; /* Reduced size */
+  }
+
+  /* Adjust contact buttons layout for smaller devices */
+  .contact-buttons {
+    flex-direction: row; /* Keep buttons side by side */
+    align-items: center; /* Center buttons vertically */
+    justify-content: center; /* Center buttons within their container */
+  }
+
+  .contact-button, .cv-button {
+    width: 100%;
+    max-width: 150px; /* Set a maximum width for buttons to fit smaller screens */
+  }
+
+  .profile-image {
+    margin-top: 10%;
+    max-width: 100%; /* Make the image smaller on small devices */
+  }
+}
+
+@media (max-width: 1000px) {
+  .intro-myname {
+    font-size: 1.2rem; /* Reduced size */
+  }
+
+  .intro-title {
+    font-size: 2rem; /* Further reduced size for very small screens */
+  }
+
+  .intro-description {
+    font-size: 0.8rem; /* Further reduced size for very small screens */
+  }
+
+  .profile-image {
+    margin-top: 10%;
+    max-width: 100%; /* Make the image smaller on small devices */
+  }
+
+  .contact-button, .cv-button {
+    width: 100%;
+    max-width: 200px; /* Set a maximum width for buttons to fit smaller screens */
+    font-size: 0.7rem;
+  }
 }
