@@ -1,5 +1,6 @@
 import React from "react";
 import profileImage from './logo.png'; 
+import curriculum from '../assets/curriculum.pdf'; 
 
 function Intro() {
   return (
@@ -16,9 +17,14 @@ function Intro() {
           collaboration, and I thrive on the excitement of developing 
           creative solutions under pressure.
         </p>
-        <a href="mailto:maria190504@gmail.com" className="contact-button">
-          Say hi!
-        </a>
+        <div className="contact-buttons">
+          <a href="mailto:maria190504@gmail.com" className="contact-button">
+            Say hi!
+          </a>
+          <a href={curriculum} className="cv-button" download>
+            Download CV
+          </a>
+        </div>
       </div>
       <img src={profileImage} alt="Maria" className="profile-image" /> {/* Image element */}
     </div>

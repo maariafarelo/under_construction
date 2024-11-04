@@ -42,7 +42,6 @@ body {
   border-radius: 10px; /* Optional: add some rounding */
 }
 
-
 .App {
   padding-top: 40px;
   background-color: var(--background-color);
@@ -62,11 +61,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  width:100%; 
+  width: 100%; 
   position: fixed; /* Keep navbar fixed on the top */
   top: 0; /* Position at the top of the viewport */
   left: 2px; /* Align to the left */
-  right:2px;
+  right: 2px;
   z-index: 1000; /* Ensure it stays above other content */
 }
 
@@ -92,8 +91,7 @@ body {
   color: var(--secondary);
 }
 
-/*Intro stuff */
-
+/* Intro stuff */
 .intro {
   color: #F8F8F8; /* Light Gray */
   width: 75%; /* Increased from 50% to 55% */
@@ -126,10 +124,13 @@ body {
   font-weight: semi-bold;
 }
 
+.contact-buttons {
+  display: flex; /* Use flexbox for button alignment */
+  gap: 10px; /* Space between buttons */
+}
 
-
-.contact-button {
-  display: inline-block;
+.contact-button, .cv-button {
+  display: inline-block; /* Display as inline block */
   margin-top: 20px; /* Space above the button */
   padding: 10px 20px; /* Padding inside the button */
   color: white; /* Button text color */
@@ -142,13 +143,10 @@ body {
   transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
-.contact-button:hover {
+.contact-button:hover, .cv-button:hover {
   background-color: #488db2; /* Change to a darker shade on hover */
 }
 
-.highlighted-name {
-  color: var(--secondary); /* Change to your desired color */
-}
 /* Responsive adjustments for small screens */
 @media (max-width: 768px) {
   /* Stack text and image vertically and center-align */
@@ -183,8 +181,19 @@ body {
   }
 
   /* Adjust contact button size */
-  .contact-button {
+  .contact-button, .cv-button {
     font-size: 1.2rem; /* Smaller font size */
     padding: 8px 16px; /* Smaller padding */
+  }
+
+  .contact-buttons {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    align-items: center; /* Center align buttons */
+    gap: 10px; /* Space between buttons */
+  }
+
+  .contact-button, .cv-button {
+    width: 100%; /* Full width buttons */
+    max-width: 200px; /* Limit maximum width for consistency */
   }
 }
