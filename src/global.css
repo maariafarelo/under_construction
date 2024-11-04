@@ -53,3 +53,50 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+/* Full-Screen Star Background */
+.star-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Prevents scrolling */
+  z-index: 1; /* Ensure stars are behind main content */
+  pointer-events: none; /* Allows interactions with other content */
+}
+
+/* Styles for individual stars */
+.star {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.05); /* Light color for stars with less opacity */
+  border-radius: 50%; /* Makes stars circular */
+  width: 6px; /* Set width to 6px */
+  height: 6px; /* Set height to 6px */
+  animation: twinkle 1.5s infinite alternate, move 5s infinite alternate; /* Animation */
+  box-shadow: 0 0 12px rgba(2, 23, 79, 0.1); /* Adjust glow effect */
+}
+
+
+/* Keyframes for twinkling stars */
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Keyframes for subtle star movement */
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(-10px, 10px);
+  }
+}
