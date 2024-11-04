@@ -8,7 +8,7 @@ function AboutMe() {
       <div className="about">
         <h2 className="about-title">About Me</h2>
         <p className="centered-text">
-          I’m a 20-year-old <span className="highlight">Informatics Engineering student </span> 
+          I’m a 20-year-old <span className="highlight"> Informatics Engineering student </span> 
           based in Barcelona, passionate about coding and continuous learning. I love diving 
           into various programming languages like <span className="highlight">Python</span>,
            <span className="highlight">JavaScript</span>, and <span className="highlight">C++
