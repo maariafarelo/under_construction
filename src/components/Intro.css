@@ -1,16 +1,15 @@
-/* Intro.css */
-
 .intro-container {
-  position: relative; /* Keep this to position circles relative to the intro */
   display: flex; /* Use flexbox to arrange items side by side */
   align-items: center; /* Align items vertically */
   justify-content: space-between; /* Space between text and image */
-  overflow: hidden; /* Prevent circles from overflowing the container */
+  overflow: hidden; /* Hide overflow for stars */
+  position: relative; /* Positioning context for absolute stars */
 }
 
 .profile-image {
+  z-index: 10; /* Ensure the profile image is on top */
   width: 100%; /* Set width to 100% to allow responsive scaling */
-  max-width: 350px; /* Limit maximum width to keep the image size reasonable */
+  max-width: 350px; /* Keep the maximum width reasonable */
   height: auto; /* Maintain the aspect ratio */
   margin-right: 20%; /* Maintain spacing from the text */
   margin-left: -50%; /* Adjust as needed */
@@ -22,46 +21,86 @@
 
 /* Scale effect on hover */
 .profile-image:hover {
-  transform: scale(1.05); /* Slightly increase size on hover */
+  transform: scale(1.1); /* Increase size on hover (10% larger) */
+  animation: none; /* Remove the bounce animation on hover */
 }
 
-/* Intro stuff */
+
+/* Add styles for the star animation */
+.star {
+  position: absolute;
+  background: rgba(46, 52, 85, 0.315); /* Pastel yellow color for stars with reduced opacity */
+  border-radius: 50%; /* Make them round */
+  width: 10px; /* Size of the stars */
+  height: 10px; /* Size of the stars */
+  animation: twinkle 1.5s infinite alternate, move 5s infinite alternate; /* Add movement */
+  box-shadow: 0 0 5px rgba(6, 3, 112, 0.299); /* Glow effect */
+  z-index: 1; /* Set a lower z-index for stars */
+}
+
+/* Keyframes for twinkle effect */
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Keyframes for movement */
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -10px); /* Move slightly up and to the right */
+  }
+  100% {
+    transform: translate(-10px, 10px); /* Move slightly down and to the left */
+  }
+}
+
+/* Existing intro styles */
 .intro {
-  color: #F8F8F8; /* Light Gray */
-  width: 75%; /* Increased from 50% to 55% */
+  z-index: 10; /* Ensure intro content is above stars */
+  width: 75%; /* Original width */
+  height: auto; /* Automatic height based on content */
   text-align: left;
   margin: 20px auto; /* Centering with automatic margins */
-  margin-top: 7%;
+  margin-top: 6%;
+  padding: 40px; /* Padding to space out content */
   border-radius: 10px; /* Slightly rounded corners */
-  line-height: 1.5; /* Improves line spacing */
+  line-height: 1.6; /* Improved line spacing */
 }
 
 .intro-title {
   color: var(--secondary);
-  font-size: 3.3rem; /* Increased from 3rem to 3.3rem */
+  font-size: 3.3rem; /* Original font size */
   font-family: 'Inter', sans-serif; 
 }
 
 .intro-description {
-  color: #b7b7b7; 
-  font-size: 1.5rem; /* Increased from 1.4rem to 1.54rem */
-  font-weight: bold;
-  font-family: NTR;
+  color: #e5e5e5; 
+  font-size: 1.5rem; /* Original font size */
+  font-weight: bold; /* Ensure text is bold */
+  font-family: NTR; /* Keep font family */
+  margin: 10px 0; /* Top and bottom margin for spacing */
 }
 
 .intro-myname {
-  color: #b7b7b7; 
-  font-size: 1rem; /* Increased from 1.4rem to 1.54rem */
+  color: #e5e5e5;
+  font-size: 1rem; /* Original font size */
   font-family: 'Inter', sans-serif;
 }
 
 .centered-text {
-  font-size: 1.5rem; /* Default size */
-  color: #b7b7b7;
+  font-size: 1.2rem; /* Original font size */
+  color: #ffffffe5;
   margin: 20px 0; /* Top and bottom margin only */
   max-width: 40%; /* Control the maximum width */
-  font-family: NTR;
-  font-weight: semi-bold;
+  font-family: 'Inter', sans-serif;
+  font-weight: Semi-Bold; /* Ensure proper weight */
 }
 
 .contact-buttons {
@@ -87,48 +126,6 @@
   background-color: #488db2; /* Change to a darker shade on hover */
 }
 
-/* New circles for animation */
-.background-circle {
-  position: absolute; /* Allow free placement on the screen */
-  border-radius: 50%; /* Make it circular */
-  background-color: rgba(255, 255, 255, 0.1); /* Light color */
-  animation: float 6s ease-in-out infinite; /* Animation for floating effect */
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/* Circles with varying sizes and positions */
-.background-circle-1 { width: 30px; height: 30px; left: 5%; top: 10%; }
-.background-circle-2 { width: 25px; height: 25px; left: 15%; top: 25%; }
-.background-circle-3 { width: 35px; height: 35px; left: 10%; top: 40%; }
-.background-circle-4 { width: 20px; height: 20px; left: 30%; top: 15%; }
-.background-circle-5 { width: 30px; height: 30px; left: 35%; top: 45%; }
-.background-circle-6 { width: 40px; height: 40px; left: 50%; top: 30%; }
-.background-circle-7 { width: 25px; height: 25px; left: 55%; top: 15%; }
-.background-circle-8 { width: 30px; height: 30px; left: 70%; top: 25%; }
-.background-circle-9 { width: 35px; height: 35px; left: 75%; top: 10%; }
-.background-circle-10 { width: 20px; height: 20px; left: 80%; top: 45%; }
-.background-circle-11 { width: 30px; height: 30px; left: 25%; bottom: 20%; }
-.background-circle-12 { width: 25px; height: 25px; left: 5%; bottom: 10%; }
-.background-circle-13 { width: 35px; height: 35px; left: 15%; bottom: 25%; }
-.background-circle-14 { width: 30px; height: 30px; left: 30%; bottom: 15%; }
-.background-circle-15 { width: 40px; height: 40px; left: 45%; bottom: 30%; }
-.background-circle-16 { width: 25px; height: 25px; left: 50%; bottom: 25%; }
-.background-circle-17 { width: 30px; height: 30px; left: 65%; bottom: 10%; }
-.background-circle-18 { width: 35px; height: 35px; left: 80%; bottom: 20%; }
-.background-circle-19 { width: 30px; height: 30px; left: 90%; bottom: 5%; }
-.background-circle-20 { width: 20px; height: 20px; left: 75%; bottom: 15%; }
-
 /* Responsive adjustments for small screens */
 @media (max-width: 768px) {
   /* Stack text and image vertically and center-align */
@@ -147,17 +144,19 @@
 
   /* Resize intro section and adjust font sizes */
   .intro {
-    width: 100%; /* Full width on small screens */
+    width: 90%; /* Full width on small screens */
+    height: auto; /* Allow height to adjust based on content */
     margin-top: 5%; /* Reduce top margin */
     text-align: center; /* Center text within the intro section */
+    padding: 20px; /* Reduce padding for smaller screens */
   }
 
   .intro-title {
-    font-size: 2.5rem; /* Smaller font for mobile */
+    font-size: 2.8rem; /* Smaller font for mobile */
   }
 
   .intro-description, .centered-text {
-    font-size: 1.2rem; /* Smaller font for readability on mobile */
+    font-size: 1.4rem; /* Smaller font for readability on mobile */
     max-width: 100%; /* Remove max-width restriction */
   }
 
