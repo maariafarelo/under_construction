@@ -77,7 +77,6 @@ body {
   box-shadow: 0 0 12px rgba(2, 23, 79, 0.1); /* Adjust glow effect */
 }
 
-
 /* Keyframes for twinkling stars */
 @keyframes twinkle {
   0% {
@@ -98,5 +97,16 @@ body {
   }
   100% {
     transform: translate(-10px, 10px);
+  }
+}
+
+/* Media query for small devices */
+@media (max-width: 768px) {
+  body {
+    cursor: none; /* Hide the cursor for smaller devices */
+  }
+
+  .custom-cursor {
+    display: none; /* Optionally hide the custom cursor on small devices */
   }
 }
