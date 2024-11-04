@@ -113,6 +113,7 @@
     max-width: 400px; 
     width: 100%;/* Make the image smaller on small devices */
   }
+
   .contact-button, .cv-button {
     font-size: 1.2rem; /* Consistent button font size */
     padding: 12px 24px; /* Consistent padding */
@@ -162,6 +163,15 @@
 }
 
 @media (max-width: 700px) {
+
+  .intro-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+    text-align: center;
+    gap: 0;
+    width: 90vw; /* Make the container responsive */
+    height: auto; /* Allow height to adjust */
+  }
   .intro-myname {
     font-size: 1.2rem; /* Reduced size */
     max-width: 100%;
@@ -169,7 +179,7 @@
 
   .intro-title {
     font-size: 2rem; 
-    max-width: 100%;/* Further reduced size for very small screens */
+    max-width: 100%; /* Further reduced size for very small screens */
   }
 
   .intro-description {
@@ -177,11 +187,10 @@
   }
 
   .profile-image {
-    margin-top: 10%;
-    max-width: 100%;
-    width: 150px; /* Make the image smaller on small devices */
+    margin-top: 10%; /* Maintain margin above the image */
+    max-width: 300%; /* Ensure the image can take full width */
+    width: 200px; /* Set a fixed width for the image on small devices */
   }
-
   .contact-button, .cv-button {
     width: 100%;
     max-width: 200px; /* Set a maximum width for buttons to fit smaller screens */
