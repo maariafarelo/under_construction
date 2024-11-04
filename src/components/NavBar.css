@@ -1,0 +1,40 @@
+/* Navbar styles */
+.navbar {
+    font-family: NTR;
+    font-weight: 800;
+    line-height: 1.5;
+    background-color: var(--navbar-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%; 
+    position: fixed; /* Keep navbar fixed on the top */
+    top: 0; /* Position at the top of the viewport */
+    left: 2px; /* Align to the left */
+    right: 2px;
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+  
+  .navbar-left {
+    flex: 1;
+    font-size: 1rem;
+    color: #d3d3d3;
+  }
+  
+  .navbar-right {
+    display: flex;
+    gap: 10px; /* Space between links */
+    font-size: 0.9rem;
+  }
+  
+  .navbar-right a {
+    color: #e6e5e5; /* Link color */
+    text-decoration: none; /* No underline */
+    font-weight: bold;
+  }
+  
+  .navbar-right a:hover {
+    color: var(--secondary);
+  }
+  

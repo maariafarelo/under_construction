@@ -1,0 +1,128 @@
+.intro-container {
+    display: flex; /* Use flexbox to arrange items side by side */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between text and image */
+  }
+  
+  .profile-image {
+    width: 350px; /* Set width for the image */
+    margin-right: 20%;
+    margin-left: -50%;
+    margin-top: 5%;
+    height: auto; /* Keep aspect ratio */
+    border-radius: 10px; /* Optional: add some rounding */
+  }
+  
+  /* Intro stuff */
+  .intro {
+    color: #F8F8F8; /* Light Gray */
+    width: 75%; /* Increased from 50% to 55% */
+    text-align: left;
+    margin: 20px auto; /* Centering with automatic margins */
+    margin-top: 10%;
+    border-radius: 10px; /* Slightly rounded corners */
+    line-height: 1.5; /* Improves line spacing */
+  }
+  
+  .intro-title {
+    color: var(--secondary);
+    font-size: 3.3rem; /* Increased from 3rem to 3.3rem */
+    font-family: 'Inter', sans-serif; 
+  }
+  
+  .intro-description {
+    color: #b7b7b7; 
+    font-size: 1.5rem; /* Increased from 1.4rem to 1.54rem */
+    font-weight: bold;
+    font-family: NTR;
+  }
+  
+  .intro-myname {
+    color: #b7b7b7; 
+    font-size: 1rem; /* Increased from 1.4rem to 1.54rem */
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .centered-text {
+    font-size: 1.5rem; /* Default size */
+    color: #b7b7b7;
+    margin: 20px 0; /* Top and bottom margin only */
+    max-width: 40%; /* Control the maximum width */
+    font-family: NTR;
+    font-weight: semi-bold;
+  }
+  
+  .contact-buttons {
+    display: flex; /* Use flexbox for button alignment */
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .contact-button, .cv-button {
+    display: inline-block; /* Display as inline block */
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 20px; /* Padding inside the button */
+    color: white; /* Button text color */
+    background-color: var(--secondary); /* Use your secondary color */
+    border: none; /* No border */
+    border-radius: 5px; /* Slightly rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-family: NTR; /* Font family */
+    font-size: 1.5rem; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  .contact-button:hover, .cv-button:hover {
+    background-color: #488db2; /* Change to a darker shade on hover */
+  }
+  
+  /* Responsive adjustments for small screens */
+  @media (max-width: 768px) {
+    /* Stack text and image vertically and center-align */
+    .intro-container {
+      flex-direction: column; /* Stack the intro and profile image */
+      align-items: center; /* Center items horizontally */
+      text-align: center; /* Center-align text */
+      padding: 0 20px; /* Add padding to the sides */
+    }
+  
+    /* Adjust image size */
+    .profile-image {
+      width: 80%; /* Set image to 80% of the screen width */
+      max-width: 250px; /* Limit the maximum width */
+      margin: 20px 0; /* Space above and below the image */
+    }
+  
+    /* Resize intro section and adjust font sizes */
+    .intro {
+      width: 100%; /* Full width on small screens */
+      margin-top: 5%; /* Reduce top margin */
+      text-align: center; /* Center text within the intro section */
+    }
+  
+    .intro-title {
+      font-size: 2.5rem; /* Smaller font for mobile */
+    }
+  
+    .intro-description, .centered-text {
+      font-size: 1.2rem; /* Smaller font for readability on mobile */
+      max-width: 100%; /* Remove max-width restriction */
+    }
+  
+    /* Adjust contact button size */
+    .contact-button, .cv-button {
+      font-size: 1.2rem; /* Smaller font size */
+      padding: 8px 16px; /* Smaller padding */
+    }
+  
+    .contact-buttons {
+      flex-direction: column; /* Stack buttons vertically on small screens */
+      align-items: center; /* Center align buttons */
+      gap: 10px; /* Space between buttons */
+    }
+  
+    .contact-button, .cv-button {
+      width: 100%; /* Full width buttons */
+      max-width: 200px; /* Limit maximum width for consistency */
+    }
+  }
+  

@@ -1,4 +1,6 @@
 import React from "react";
+import './NavBar.css'; // This assumes Intro.css is in the same directory as Intro.js
+
 
 function NavBar() {
   return (

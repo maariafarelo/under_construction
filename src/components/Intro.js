@@ -1,13 +1,17 @@
 import React from "react";
-import profileImage from './logo.png'; 
+import profileImage from '../assets/logo.png'; 
 import curriculum from '../assets/curriculum.pdf'; 
+import './Intro.css'; 
 
 function Intro() {
   return (
     <div className="intro-container">
       <div className="intro">
+        <h2 className= "intro-myname">
+          HI! MY NAME IS
+        </h2>
         <h2 className="intro-title">
-          hi, <span className="highlighted-name">Maria</span> here!
+           Maria Farelo.
         </h2>
         <p className="intro-description">Just a creative soul exploring digital horizons.</p>
         <p className="centered-text">
