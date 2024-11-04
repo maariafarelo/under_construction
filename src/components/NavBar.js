@@ -6,7 +6,7 @@ function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-      <h2 className="name">&lt; Maria Farelo /&gt;</h2>
+      <h2 className="name">&lt; Farelo /&gt;</h2>
       </div>
       <div className="navbar-right">
         <a
