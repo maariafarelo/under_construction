@@ -216,7 +216,7 @@
   }
   .contact-button, .cv-button {
     width: 100%;
-    max-width: 200px; /* Set a maximum width for buttons to fit smaller screens */
+    max-width: 200px; 
     font-size: 0.7rem;
   }
 }
