@@ -12,36 +12,8 @@
   box-sizing: border-box;
 }
 
-/* global.css or your dedicated cursor.css */
 body {
-  cursor: none; /* Hide the default cursor */
-}
-
-/* Custom cursor styles */
-.custom-cursor {
-  position: fixed;
-  width: 24px; /* Width of the custom cursor */
-  height: 24px; /* Height of the custom cursor */
-  background-color: transparent; /* No background color for the pointer shape */
-  pointer-events: none; /* Prevents the cursor from interfering with clicks */
-  z-index: 9999; /* Ensure it stays above other elements */
-  transform: translate(-50%, -50%); /* Center the cursor on the mouse position */
-  border: 3px solid #6dcaff; /* Blue border to resemble default pointer */
-  border-radius: 3px; /* Slight rounding to make it softer */
-}
-
-/* Create the arrowhead using a pseudo-element */
-.custom-cursor::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent; /* Left point of the arrow */
-  border-right: 6px solid transparent; /* Right point of the arrow */
-  border-bottom: 8px solid #6dcaff; /* Blue color for the arrow */
-  top: 20%; /* Adjust position to place it correctly */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center the arrow */
+  cursor: default; /* Hide the default cursor */
 }
 
 /* General application styles */
