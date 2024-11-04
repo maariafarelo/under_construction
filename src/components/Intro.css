@@ -163,7 +163,7 @@
   }
 }
 
-@media (max-width: 1169px) {
+@media (max-width: 850px) {
 
   .intro {
 
@@ -175,17 +175,22 @@
     width:auto; 
   }
 
+  .intro-content {
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+  }
+
   /* Center text on smaller devices */
   .intro-myname {
+    align-content: center;
     margin-top: 30px;
-    text-align: center; /* Center text for smaller devices */
-    width: auto;
   }
 
   .intro-title {
      /* Center text for smaller devices */
     font-size: 1.6rem; /* Reduced size for smaller screens */
-    width: 270px;
+
   }
 
   .intro-description {
