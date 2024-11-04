@@ -211,7 +211,7 @@
   .profile-image {
     margin-top: 10%; /* Maintain margin above the image */
     max-width: 300%; /* Ensure the image can take full width */
-    width: 2750px; /* Set a fixed width for the image on small devices */
+    width: 275px; /* Set a fixed width for the image on small devices */
   }
   .contact-button, .cv-button {
     width: 100%;
