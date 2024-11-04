@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       {/* Star background */}
       <div className="star-background">
-        {createStars(100)} {/* Create 100 stars */}
+        {createStars(100)} 
       </div>
       <NavBar />
       <Intro />
