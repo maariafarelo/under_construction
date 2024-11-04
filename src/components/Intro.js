@@ -30,7 +30,29 @@ function Intro() {
           </a>
         </div>
       </div>
-      <img src={profileImage} alt="Maria" className="profile-image" /> {/* Image element */}
+      <img src={profileImage} alt="Maria" className="profile-image" />
+      
+      {/* Background circles */}
+      <div className="background-circle background-circle-1"></div>
+      <div className="background-circle background-circle-2"></div>
+      <div className="background-circle background-circle-3"></div>
+      <div className="background-circle background-circle-4"></div>
+      <div className="background-circle background-circle-5"></div>
+      <div className="background-circle background-circle-6"></div>
+      <div className="background-circle background-circle-7"></div>
+      <div className="background-circle background-circle-8"></div>
+      <div className="background-circle background-circle-9"></div>
+      <div className="background-circle background-circle-10"></div>
+      <div className="background-circle background-circle-11"></div>
+      <div className="background-circle background-circle-12"></div>
+      <div className="background-circle background-circle-13"></div>
+      <div className="background-circle background-circle-14"></div>
+      <div className="background-circle background-circle-15"></div>
+      <div className="background-circle background-circle-16"></div>
+      <div className="background-circle background-circle-17"></div>
+      <div className="background-circle background-circle-18"></div>
+      <div className="background-circle background-circle-19"></div>
+      <div className="background-circle background-circle-20"></div>
     </div>
   );
 }
