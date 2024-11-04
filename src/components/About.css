@@ -71,10 +71,10 @@
 /* Additional responsive adjustments */
 @media (max-width: 1000px) {
   .about-title {
-    font-size: 2rem; /* Even smaller title for very small screens */
+    font-size: 1.7rem; /* Even smaller title for very small screens */
   }
 
   .centered-text {
-    font-size: 0.8rem; /* Even smaller description for very small screens */
+    font-size: 0.7rem; /* Even smaller description for very small screens */
   }
 }

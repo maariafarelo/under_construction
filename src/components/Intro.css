@@ -122,6 +122,7 @@
 
 @media (max-width: 1170px) {
   .intro-container {
+    
     flex-direction: column; /* Stack sections vertically */
     align-items: center;
     text-align: center;
@@ -162,9 +163,10 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1169px) {
 
   .intro {
+
     flex-direction: column; 
     align-items: center;
     text-align: center;
@@ -177,13 +179,13 @@
   .intro-myname {
     margin-top: 30px;
     text-align: center; /* Center text for smaller devices */
-    widht: 100%;
+    width: auto;
   }
 
   .intro-title {
-    text-align: center; /* Center text for smaller devices */
-    font-size: 2rem; /* Reduced size for smaller screens */
-    width: 100%;
+     /* Center text for smaller devices */
+    font-size: 1.6rem; /* Reduced size for smaller screens */
+    width: 270px;
   }
 
   .intro-description {
@@ -204,7 +206,7 @@
   .profile-image {
     margin-top: 10%; /* Maintain margin above the image */
     max-width: 300%; /* Ensure the image can take full width */
-    width: 270px; /* Set a fixed width for the image on small devices */
+    width: 250px; /* Set a fixed width for the image on small devices */
   }
   .contact-button, .cv-button {
     width: 100%;
