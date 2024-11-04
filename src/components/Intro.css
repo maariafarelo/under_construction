@@ -6,6 +6,7 @@
   position: relative; /* Positioning context for absolute stars */
 }
 
+/* Profile image styles */
 .profile-image {
   z-index: 10; /* Ensure the profile image is on top */
   width: 100%; /* Set width to 100% to allow responsive scaling */
@@ -25,7 +26,7 @@
   animation: none; /* Remove the bounce animation on hover */
 }
 
-/* Add styles for the star animation */
+/* Star styles */
 .star {
   position: absolute;
   background: rgba(46, 52, 85, 0.315); /* Pastel yellow color for stars with reduced opacity */
@@ -127,9 +128,8 @@
   color: white; /* Button text color on hover */
 }
 
-/* Responsive adjustments for small screens */
-@media (max-width: 1000px) {
-  /* Stack text and image vertically and center-align */
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1170px) {
   .intro-container {
     flex-direction: column; /* Stack the intro and profile image */
     align-items: center; /* Center items horizontally */
@@ -138,11 +138,11 @@
   }
 
   .profile-image {
-    width: 30%; /* Set image to 60% of the screen width */
-    margin: 20px 0; /* Add margin for spacing above and below */
+    width: 70%; /* Set image to 70% of the screen width */
+    max-width: 300px; /* Maximum width for the image */
+    margin: 10px 0; /* Reduce margin for spacing */
   }
 
-  /* Resize intro section and adjust font sizes */
   .intro {
     width: 90%; /* Full width on small screens */
     height: auto; /* Allow height to adjust based on content */
@@ -152,7 +152,7 @@
   }
 
   .intro-title {
-    font-size: 2.8rem; /* Smaller font for mobile */
+    font-size: 2.5rem; /* Smaller font for mobile */
   }
 
   .intro-description, .centered-text {
@@ -163,7 +163,7 @@
 
   /* Adjust contact button size */
   .contact-button, .cv-button {
-    font-size: 1.2rem; /* Smaller font size */
+    font-size: 1rem; /* Maintain smaller font size */
     padding: 8px 16px; /* Smaller padding */
   }
 
@@ -179,21 +179,21 @@
   }
 }
 
-/* Responsive adjustments for medium screens */
-@media (max-width: 1024px) {
+/* Additional responsive adjustments */
+@media (max-width: 1000px) {
   .profile-image {
-    width: 50%; /* Set image to 70% of the screen width */
+    width: 90%; /* Set image to 90% of the screen width */
   }
 
   .intro {
-    padding: 30px; /* Adjust padding for medium screens */
+    padding: 15px; /* Further reduce padding for very small screens */
   }
 
   .intro-title {
-    font-size: 3rem; /* Slightly smaller font for medium screens */
+    font-size: 2rem; /* Even smaller title for very small screens */
   }
 
   .intro-description {
-    font-size: 1.2rem; /* Slightly smaller font for medium screens */
+    font-size: 0.9rem; /* Even smaller description for very small screens */
   }
 }
