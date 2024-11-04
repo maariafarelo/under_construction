@@ -146,63 +146,45 @@ body {
   background-color: #488db2; /* Change to a darker shade on hover */
 }
 
-.intro-container {
-  display: flex; /* Use flexbox to arrange items side by side */
-  align-items: center; /* Align items vertically */
-  justify-content: space-between; /* Space between text and image */
-}
-
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .centered-text {
-    font-size: 1.2rem; /* Adjust size for tablets */
-    max-width: 70%; /* Increase width on smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .centered-text {
-    font-size: 1rem; /* Further reduce for mobile */
-    max-width: 90%; /* Full width for very small screens */
-  }
-}
-
-
-
 .highlighted-name {
   color: var(--secondary); /* Change to your desired color */
 }
-
-
-
-/* Responsive styles */
+/* Responsive adjustments for small screens */
 @media (max-width: 768px) {
+  /* Stack text and image vertically and center-align */
+  .intro-container {
+    flex-direction: column; /* Stack the intro and profile image */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center-align text */
+    padding: 0 20px; /* Add padding to the sides */
+  }
+
+  /* Adjust image size */
+  .profile-image {
+    width: 80%; /* Set image to 80% of the screen width */
+    max-width: 250px; /* Limit the maximum width */
+    margin: 20px 0; /* Space above and below the image */
+  }
+
+  /* Resize intro section and adjust font sizes */
   .intro {
-      width: 80%; /* Wider on smaller screens */
-      padding: 20px; /* Less padding for small devices */
+    width: 100%; /* Full width on small screens */
+    margin-top: 5%; /* Reduce top margin */
+    text-align: center; /* Center text within the intro section */
   }
 
   .intro-title {
-      font-size: 2rem; /* Smaller title for small screens */
+    font-size: 2.5rem; /* Smaller font for mobile */
   }
 
-  .intro-description {
-      font-size: 1rem; /* Smaller description for small screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .intro {
-      width: 90%; /* Full width on very small screens */
+  .intro-description, .centered-text {
+    font-size: 1.2rem; /* Smaller font for readability on mobile */
+    max-width: 100%; /* Remove max-width restriction */
   }
 
-  .intro-title {
-      font-size: 1.5rem; /* Even smaller title for very small screens */
-  }
-
-  .intro-description {
-      font-size: 0.5rem; /* Smaller description for very small screens */
+  /* Adjust contact button size */
+  .contact-button {
+    font-size: 1.2rem; /* Smaller font size */
+    padding: 8px 16px; /* Smaller padding */
   }
 }
