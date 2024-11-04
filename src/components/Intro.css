@@ -161,22 +161,25 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   .intro-myname {
     font-size: 1.2rem; /* Reduced size */
+    max-width: 100%;
   }
 
   .intro-title {
-    font-size: 2rem; /* Further reduced size for very small screens */
+    font-size: 2rem; 
+    max-width: 100%;/* Further reduced size for very small screens */
   }
 
   .intro-description {
-    font-size: 0.8rem; /* Further reduced size for very small screens */
+    font-size: 0.8rem; 
   }
 
   .profile-image {
     margin-top: 10%;
-    max-width: 100%; /* Make the image smaller on small devices */
+    max-width: 100%;
+    width: 150px; /* Make the image smaller on small devices */
   }
 
   .contact-button, .cv-button {
