@@ -18,17 +18,17 @@
   height: auto; /* Automatic height based on content */
 }
 
-.column-title{
+.column-title {
   margin-bottom: 30px;
   margin-top: 20px;
   width: auto;
   font-family: 'Inter', sans-serif;
   color: white;
-  font-weight: Bold;
+  font-weight: bold;
   line-height: 1.2;
   font-size: 1.3rem;
-
 }
+
 .column {
   box-shadow: 2px 3px 20px var(--secondary); /* Shadow with the --secondary color */
   flex: 1; /* Equal space for each column */
@@ -40,7 +40,21 @@
   font-size: 1.6rem;
   font-family: NTR;
   font-weight: semi-bold;
+}
 
+/* Image grid styling */
+.image-grid {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
+  gap: 10px; /* Space between images */
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+.image-grid img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Display images as block elements */
 }
 
 /* About title styling */
@@ -61,25 +75,28 @@
   }
 
   .tools {
-      flex-direction: column; /* Stack columns on small screens */
-      width: 100%; /* Full width on small screens */
+    flex-direction: column; /* Stack columns on small screens */
+    width: 100%; /* Full width on small screens */
   }
 
   .column {
-      margin: 10px 0; /* Space between stacked columns */
-      width: 100%; /* Full width for each column */
-      margin-bottom: 50px;
+    margin: 10px 0; /* Space between stacked columns */
+    width: 100%; /* Full width for each column */
+    margin-bottom: 50px;
   }
 
   .tools-title {
-      margin-top: 50px;
-      font-size: 2.5rem; /* Smaller font for mobile */
+    margin-top: 50px;
+    font-size: 2.5rem; /* Smaller font for mobile */
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr; /* Stack images in one column on smaller screens */
   }
 }
 
 @media (max-width: 1000px) {
   .tools-title {
-      font-size: 1.7rem; /* Even smaller title for very small screens */
+    font-size: 1.7rem; /* Even smaller title for very small screens */
   }
-
 }
