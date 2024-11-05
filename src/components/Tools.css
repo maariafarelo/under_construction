@@ -13,7 +13,7 @@
     line-height: 1.6; /* Improved line spacing */
     background-color: #00000015; /* Semi-transparent background */
     box-shadow: 2px 3px 20px var(--secondary); /* Shadow with the --secondary color */
-    height: 70vh;
+    height: 60vh;
     width: 130vh;
   }
   
