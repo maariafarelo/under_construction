@@ -31,15 +31,7 @@ function Tools() {
             </a>
           </ul>
 
-          <h3 className="column-title">Frameworks</h3>
-          <ul className="image-grid">
-            <a href="https://flutter.dev" target="_blank" rel="noopener noreferrer">
-              <img src={require('../assets/flutter.png')} alt="Flutter" />
-            </a>
-            <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-              <img src={require('../assets/react.png')} alt="React" />
-            </a>
-          </ul>
+         
         </div>
 
         <div className="column">
@@ -49,7 +41,13 @@ function Tools() {
               <img src={require('../assets/git.png')} alt="Git" />
             </a>
             <a href="https://www.jetbrains.com" target="_blank" rel="noopener noreferrer">
-              <img src={require('../assets/JETBRAIN.png')} alt="JetBrains Tools" />
+              <img src={require('../assets/intellj.png')} alt="Intellj IDEA" />
+            </a>
+            <a href="https://www.jetbrains.com" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/pycharm.webp')} alt="Pycharm" />
+            </a>
+            <a href="https://www.jetbrains.com" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/webstorm.png')} alt="Webstorm" />
             </a>
             <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">
               <img src={require('../assets/code.png')} alt="VS Code" />
@@ -80,7 +78,20 @@ function Tools() {
             </a>
           </ul>
         </div>
+        <div className="column"> 
+      <h3 className="column-title">Frameworks</h3>
+          <ul className="image-grid">
+            <a href="https://flutter.dev" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/flutter.png')} alt="Flutter" />
+            </a>
+            <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/react.png')} alt="React" />
+            </a>
+          </ul>
       </div>
+      </div>
+      
+      
     </div>
   );
 }
