@@ -1,61 +1,82 @@
 .tools-container {
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center content horizontally */
-    text-align: center; /* Center text within the container */
-    padding: 20px; /* Optional padding */
-    margin-bottom: 50px;
-  }
-  
-  .tools {
-    z-index: 10; /* Ensure about content is above other elements */
-    height: auto; /* Automatic height based on content */
-    border-radius: 10px; /* Slightly rounded corners */
-    line-height: 1.6; /* Improved line spacing */
-    background-color: #00000015; /* Semi-transparent background */
-    box-shadow: 2px 3px 20px var(--secondary); /* Shadow with the --secondary color */
-    height: 60vh;
-    width: 130vh;
-  }
-  
-  
-  /* About title styling */
-  .tools-title {
-    color: var(--secondary); /* Use a CSS variable for color */
-    font-size: 3.3rem; /* Font size for title */
-    font-family: 'Inter', sans-serif; 
-    margin-bottom: 50px;
-  }
-  
+  display: flex; /* Ensure flex layout */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center content horizontally */
+  text-align: center; /* Center text within the container */
+  padding: 20px; /* Optional padding */
+  margin-bottom: 50px;
+}
 
-  /* Responsive adjustments for smaller screens */
-  @media (max-width: 1170px) {
-    .tools-container {
-      width: 90%;
-      height: 100%;
-      flex-direction: column; /* Stack the about content vertically */
-      align-items: center; /* Center items horizontally */
-      padding: 0 20px; /* Add padding to the sides */
-    }
-  
-    .tools {
+.tools {
+  display: flex; /* Flex layout for columns */
+  z-index: 10; /* Ensure about content is above other elements */
+  border-radius: 10px; /* Slightly rounded corners */
+  line-height: 1.6; /* Improved line spacing */
+  width: 140vh; /* Full width */
+  height: 60vh; /* Automatic height based on content */
+}
+
+.column-title{
+  margin-bottom: 30px;
+  margin-top: 20px;
+  width: auto;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  font-weight: Bold;
+  line-height: 1.2;
+  font-size: 1.3rem;
+
+}
+.column {
+  box-shadow: 2px 3px 20px var(--secondary); /* Shadow with the --secondary color */
+  flex: 1; /* Equal space for each column */
+  margin: 0 25px; /* Space between columns */
+  border-radius: 8px; /* Rounded corners for columns */
+  padding: 20px; /* Padding inside columns */
+  width: auto;
+  color: rgb(176, 176, 176);
+  font-size: 1.6rem;
+  font-family: NTR;
+  font-weight: semi-bold;
+
+}
+
+/* About title styling */
+.tools-title {
+  color: var(--secondary); /* Use a CSS variable for color */
+  font-size: 3.3rem; /* Font size for title */
+  font-family: 'Inter', sans-serif; 
+  margin-bottom: 50px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1170px) {
+  .tools-container {
+    width: 100%;
+    flex-direction: column; /* Stack the about content vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 0 20px; /* Add padding to the sides */
+  }
+
+  .tools {
+      flex-direction: column; /* Stack columns on small screens */
       width: 100%; /* Full width on small screens */
-      padding: 20px; /* Reduce padding for smaller screens */
-    }
-  
-    .tools-title {
+  }
+
+  .column {
+      margin: 10px 0; /* Space between stacked columns */
+      width: 100%; /* Full width for each column */
+  }
+
+  .tools-title {
       margin-top: 50px;
       font-size: 2.5rem; /* Smaller font for mobile */
-    }
-  
-    
   }
-  
-  /* Additional responsive adjustments */
-  @media (max-width: 1000px) {
-    .tools-title {
+}
+
+@media (max-width: 1000px) {
+  .tools-title {
       font-size: 1.7rem; /* Even smaller title for very small screens */
-    }
-  
-    
   }
-  
+}
