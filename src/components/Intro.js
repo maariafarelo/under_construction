@@ -6,7 +6,6 @@ import './Intro.css';
 function Intro() {
   return (
     <div className="intro-container">
-      {/* Left Section: Text Content */}
       <div className="intro-content">
         <h2 className="intro-myname">hi! my name is</h2>
         <h2 className="intro-title">Maria Farelo.</h2>
@@ -17,7 +16,6 @@ function Intro() {
         </div>
       </div>
 
-      {/* Right Section: Profile Image */}
       <div className="intro-image">
         <img src={profileImage} alt="Maria" className="profile-image" />
       </div>

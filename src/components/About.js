@@ -25,8 +25,7 @@ function AboutMe() {
           In my free time, you can find me traveling, getting lost in a good book, or relaxing at
            the beach. Whether I'm coding, organizing events, or exploring new places,
             <span className="highlight"> I’m always looking to grow and connect with others
-               in the tech community</span>. My goal is to make a meaningful impact and 
-               inspire others to embrace the joy of learning and discovery.
+               in the tech community</span>.
         </p>
       </div>
     </div>
