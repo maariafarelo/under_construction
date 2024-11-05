@@ -1,5 +1,5 @@
 import profileImage from '../assets/logo.png'; 
-import curriculum from '../assets/curriculum.pdf'; 
+import curriculum from '../assets/CV.pdf'; 
 import React from 'react';
 import './Intro.css'; 
 
