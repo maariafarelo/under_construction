@@ -1,0 +1,61 @@
+.tools-container {
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text within the container */
+    padding: 20px; /* Optional padding */
+    margin-bottom: 50px;
+  }
+  
+  .tools {
+    z-index: 10; /* Ensure about content is above other elements */
+    height: auto; /* Automatic height based on content */
+    border-radius: 10px; /* Slightly rounded corners */
+    line-height: 1.6; /* Improved line spacing */
+    background-color: #00000015; /* Semi-transparent background */
+    box-shadow: 2px 3px 20px var(--secondary); /* Shadow with the --secondary color */
+    height: 70vh;
+    width: 130vh;
+  }
+  
+  
+  /* About title styling */
+  .tools-title {
+    color: var(--secondary); /* Use a CSS variable for color */
+    font-size: 3.3rem; /* Font size for title */
+    font-family: 'Inter', sans-serif; 
+    margin-bottom: 50px;
+  }
+  
+
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 1170px) {
+    .tools-container {
+      width: 90%;
+      height: 100%;
+      flex-direction: column; /* Stack the about content vertically */
+      align-items: center; /* Center items horizontally */
+      padding: 0 20px; /* Add padding to the sides */
+    }
+  
+    .tools {
+      width: 100%; /* Full width on small screens */
+      padding: 20px; /* Reduce padding for smaller screens */
+    }
+  
+    .tools-title {
+      margin-top: 50px;
+      font-size: 2.5rem; /* Smaller font for mobile */
+    }
+  
+    
+  }
+  
+  /* Additional responsive adjustments */
+  @media (max-width: 1000px) {
+    .tools-title {
+      font-size: 1.7rem; /* Even smaller title for very small screens */
+    }
+  
+    
+  }
+  

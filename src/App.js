@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./components/NavBar"; 
 import Intro from "./components/Intro";
 import AboutMe from "./components/About";
+import Tools from "./components/Tools";
 import CustomCursor from "./components/CustomCursor"; // Ensure this path is correct
 import "./global.css";
 
@@ -32,6 +33,7 @@ function App() {
       <NavBar />
       <Intro />
       <AboutMe/>
+      <Tools/>
       <CustomCursor />
     </div>
   );
