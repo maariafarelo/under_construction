@@ -7,7 +7,7 @@ import "./global.css";
 
 function App() {
    // Function to generate stars
-  const createStars = (numberOfStars = 10) => { // Valor predeterminado de 10 estrellas
+  const createStars = (numberOfStars = 50) => { 
     const stars = [];
     for (let i = 0; i < numberOfStars; i++) {
       // Randomize the position and size of the stars
