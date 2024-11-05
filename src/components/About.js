@@ -12,17 +12,16 @@ function AboutMe() {
           based in Barcelona, passionate about coding and continuous learning. I love diving 
           into various programming languages like <span className="highlight">Python, Java,
           Javascript or C++ </span> and I’m always eager to stay updated on the latest trends in software 
-          development, including web development frameworks, artificial intelligence, and 
-          machine learning.
+          development.
         </p>
         <p className="centered-text">
           I'm a hackathon enthusiast and an <span className="highlight">organizer at HackUPC</span>,
-           I thrive in fast-paced environments where creativity meets collaboration. 
+           currently Logistics Director. I thrive in fast-paced environments where creativity meets collaboration. 
            Participating in hackathons around the world has sharpened my technical skills and 
            enriched my problem-solving abilities. 
         </p>
         <p className="centered-text">
-          In my free time, you can find me traveling, getting lost in a good book, or relaxing at
+          In my free time, you can find me getting lost in a good book,travelling, or relaxing at
            the beach. Whether I'm coding, organizing events, or exploring new places,
             <span className="highlight"> I’m always looking to grow and connect with others
                in the tech community</span>.
