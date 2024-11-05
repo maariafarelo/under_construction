@@ -1,47 +1,83 @@
 import React from 'react';
-import './Tools.css'; 
+import './Tools.css';
 
 function Tools() {
   return (
     <div className="tools-container">
-      <h2 className="tools-title">My Tools</h2>
+      <h2 className="tools-title">my tools</h2>
+      <p className="tools-subtitle">continuously learning and refining my 
+        skills with these tools: </p>
       <div className="tools">
         <div className="column">
           <h3 className="column-title">Languages</h3>
           <ul className="image-grid">
-            <img src="path/to/javascript-logo.png" alt="JavaScript" />
-            <img src="path/to/java-logo.png" alt="Java" />
-            <img src="path/to/python-logo.png" alt="Python" />
-            <img src="path/to/cplusplus-logo.png" alt="C++" />
-            <img src="path/to/dart-logo.png" alt="Dart" />
-            <img src="path/to/html-css-logo.png" alt="CSS & HTML" />
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/javascript.png')} alt="JavaScript" />
+            </a>
+            <a href="https://www.java.com" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/java.png')} alt="Java" />
+            </a>
+            <a href="https://www.python.org" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/python.png')} alt="Python" />
+            </a>
+            <a href="https://isocpp.org/" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/c-.png')} alt="C++" />
+            </a>
+            <a href="https://dart.dev" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/Dart.png')} alt="Dart" />
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/css.webp')} alt="CSS & HTML" />
+            </a>
           </ul>
 
           <h3 className="column-title">Frameworks</h3>
           <ul className="image-grid">
-            <img src="path/to/flutter-logo.png" alt="Flutter" />
-            <img src="path/to/react-logo.png" alt="React" />
+            <a href="https://flutter.dev" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/flutter.png')} alt="Flutter" />
+            </a>
+            <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/react.png')} alt="React" />
+            </a>
           </ul>
         </div>
 
         <div className="column">
           <h3 className="column-title">Tools</h3>
           <ul className="image-grid">
-            <img src="path/to/git-logo.png" alt="Git" />
-            <img src="path/to/jetbrains-logo.png" alt="JetBrains Tools" />
-            <img src="path/to/vscode-logo.png" alt="VS Code" />
-            <img src="path/to/microsoft-tools-logo.png" alt="Microsoft Tools" />
+            <a href="https://git-scm.com" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/git.png')} alt="Git" />
+            </a>
+            <a href="https://www.jetbrains.com" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/JETBRAIN.png')} alt="JetBrains Tools" />
+            </a>
+            <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/code.png')} alt="VS Code" />
+            </a>
+            <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/windows.png')} alt="Microsoft Tools" />
+            </a>
           </ul>
         </div>
 
         <div className="column">
           <h3 className="column-title">Miscellaneous</h3>
           <ul className="image-grid">
-            <img src="path/to/figma-logo.png" alt="Figma" />
-            <img src="path/to/slack-logo.png" alt="Slack" />
-            <img src="path/to/netlify-logo.png" alt="Netlify" />
-            <img src="path/to/meet-logo.png" alt="Google Meet" />
-            <img src="path/to/notion-logo.png" alt="Notion" />
+            <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/figma.png')} alt="Figma" />
+            </a>
+            <a href="https://slack.com" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/slack.png')} alt="Slack" />
+            </a>
+            <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/netlify.png')} alt="Netlify" />
+            </a>
+            <a href="https://meet.google.com" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/workspacde.png')} alt="Google Meet" />
+            </a>
+            <a href="https://www.notion.so" target="_blank" rel="noopener noreferrer">
+              <img src={require('../assets/notion.png')} alt="Notion" />
+            </a>
           </ul>
         </div>
       </div>

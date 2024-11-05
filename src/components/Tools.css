@@ -1,21 +1,38 @@
+/* About title styling */
+.tools-title {
+  color: var(--secondary);
+  font-size: 3.3rem;
+  font-family: 'Inter', sans-serif; 
+  margin-bottom: 10px;
+}
+
+/* About title styling */
+.tools-subtitle {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: NTR;
+  margin-bottom: 25px;
+}
+
+
 .tools-container {
   display: flex; /* Ensure flex layout */
   flex-direction: column; /* Stack elements vertically */
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center content horizontally */
   text-align: center; /* Center text within the container */
-  padding: 20px; /* Optional padding */
+  padding: 20px;
   margin-bottom: 50px;
-  height: auto;
 }
 
 .tools {
   display: flex; /* Flex layout for columns */
-  z-index: 10; /* Ensure about content is above other elements */
-  border-radius: 10px; /* Slightly rounded corners */
-  line-height: 1.6; /* Improved line spacing */
-  width: 150vh; /* Full width */
-  height: auto; /* Automatic height based on content */
+  z-index: 10;
+  border-radius: 10px;
+  line-height: 1.6;
+  width: 150vh;
+  height: auto;
 }
 
 .column-title {
@@ -27,76 +44,92 @@
   font-weight: bold;
   line-height: 1.2;
   font-size: 1.3rem;
+  text-align: center;
 }
 
 .column {
-  box-shadow: 2px 3px 20px var(--secondary); /* Shadow with the --secondary color */
-  flex: 1; /* Equal space for each column */
-  margin: 0 25px; /* Space between columns */
-  border-radius: 8px; /* Rounded corners for columns */
-  padding: 20px; /* Padding inside columns */
+  transition: transform 0.3s ease; /* Smooth scaling effect for the entire column */
+  box-shadow: 2px 3px 20px var(--secondary);
+  flex: 1;
+  margin: 0 25px;
+  border-radius: 8px;
+  padding: 20px;
   width: auto;
+  height: auto;
   color: rgb(176, 176, 176);
   font-size: 1.6rem;
   font-family: NTR;
   font-weight: semi-bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Image grid styling */
 .image-grid {
-  display: grid; /* Use grid layout */
-  grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
-  gap: 10px; /* Space between images */
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove padding */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 10px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto; /* Center the grid */
+  width: 80%; /* Slightly narrower width for centering */
+}
+
+/* Link styling for each image with hover effect */
+.image-grid a {
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .image-grid img {
-  max-width: 100%; /* Ensure images are responsive */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Display images as block elements */
+  max-width: 60px; /* Smaller image width */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center each image within its cell */
 }
 
-/* About title styling */
-.tools-title {
-  color: var(--secondary); /* Use a CSS variable for color */
-  font-size: 3.3rem; /* Font size for title */
-  font-family: 'Inter', sans-serif; 
-  margin-bottom: 25px;
+/* Hover effect */
+.image-grid a:hover {
+  transform: scale(1.1); /* Slightly enlarges the icon on hover */
+}
+
+.column:hover {
+  transform: scale(1.05); /* Slightly enlarges the entire column on hover */
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 1170px) {
   .tools-container {
     width: 90%;
-    flex-direction: column; /* Stack the about content vertically */
-    align-items: center; /* Center items horizontally */
-    padding: 0 20px; /* Add padding to the sides */
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
   }
 
   .tools {
-    flex-direction: column; /* Stack columns on small screens */
-    width: 100%; /* Full width on small screens */
+    flex-direction: column;
+    width: 100%;
   }
 
   .column {
-    margin: 10px 0; /* Space between stacked columns */
-    width: 100%; /* Full width for each column */
+    margin: 10px 0;
+    width: 100%;
     margin-bottom: 50px;
   }
 
   .tools-title {
     margin-top: 50px;
-    font-size: 2.5rem; /* Smaller font for mobile */
-  }
-
-  .image-grid {
-    grid-template-columns: 1fr; /* Stack images in one column on smaller screens */
+    font-size: 2.5rem;
   }
 }
 
 @media (max-width: 1000px) {
   .tools-title {
-    font-size: 1.7rem; /* Even smaller title for very small screens */
+    font-size: 1.7rem;
+  }
+
+  .tools-subtitle {
+    font-size: 0.8rem;
   }
 }
