@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import Intro from "./components/Intro";
 import AboutMe from "./components/About";
 import Tools from "./components/Tools";
+import PetProjects from "./components/PetProjects"
 import CustomCursor from "./components/CustomCursor"; // Ensure this path is correct
 import "./global.css";
 
@@ -34,6 +35,7 @@ function App() {
       <Intro />
       <AboutMe/>
       <Tools/>
+      <PetProjects/>
       <CustomCursor />
     </div>
   );
