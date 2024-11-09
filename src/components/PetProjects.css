@@ -1,0 +1,99 @@
+/* About title styling */
+.PetProjects-title {
+    color: var(--secondary); /* Use a CSS variable for color */
+    font-size: 3.3rem; /* Font size for title */
+    font-family: 'Inter', sans-serif; 
+    margin-bottom: 50px;
+}
+
+.PetProjects-container {
+display: flex; /* Ensure flex layout */
+flex-direction: column; /* Stack elements vertically */
+align-items: center; /* Center items vertically */
+justify-content: center; /* Center content horizontally */
+text-align: center; /* Center text within the container */
+padding: 20px;
+margin-bottom: 120px;
+
+}
+
+.PetProjects {
+display: flex; /* Flex layout for columns */
+z-index: 10;
+border-radius: 10px;
+line-height: 1.6;
+width: 150vh;
+height: auto;
+}
+
+.a-title {
+margin-bottom: 30px;
+margin-top: 20px;
+width: auto;
+font-family: 'Inter', sans-serif;
+color: white;
+font-weight: bold;
+line-height: 1.2;
+font-size: 1.3rem;
+text-align: center;
+}
+
+.column {
+transition: transform 0.3s ease; /* Smooth scaling effect for the entire column */
+box-shadow: 2px 3px 20px var(--secondary);
+flex: 1;
+margin: 0 25px;
+border-radius: 8px;
+padding: 20px;
+width: auto;
+height: auto;
+color: rgb(176, 176, 176);
+font-size: 1.6rem;
+font-family: NTR;
+font-weight: semi-bold;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+
+.column:hover {
+transform: scale(1.05); /* Slightly enlarges the entire column on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1170px) {
+.PetProjects-container {
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.tools {
+  flex-direction: column;
+  width: 100%;
+}
+
+.column {
+  margin: 10px 0;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.PetProjects-title {
+  margin-top: 50px;
+  font-size: 2.5rem;
+}
+}
+
+@media (max-width: 1000px) {
+.PetProjects-title {
+  font-size: 1.7rem;
+}
+
+.PetProjects-subtitle {
+  font-size: 0.8rem;
+}
+}
