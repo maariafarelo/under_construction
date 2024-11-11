@@ -1,99 +1,193 @@
-/* About title styling */
-.PetProjects-title {
-    color: var(--secondary); /* Use a CSS variable for color */
-    font-size: 3.3rem; /* Font size for title */
-    font-family: 'Inter', sans-serif; 
-    margin-bottom: 50px;
+/* Styling for the title */
+.pet-projects-slider h2 {
+  color: var(--secondary); /* Using your CSS variable for color */
+  font-size: 3.3rem; /* Adjusted to make it smaller */
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 40px; /* Reduced margin-bottom for compactness */
+  text-align: center;
 }
 
-.PetProjects-container {
-display: flex; /* Ensure flex layout */
-flex-direction: column; /* Stack elements vertically */
-align-items: center; /* Center items vertically */
-justify-content: center; /* Center content horizontally */
-text-align: center; /* Center text within the container */
-padding: 20px;
-margin-bottom: 120px;
-
+.pet-projects-slider {
+  margin-bottom: 80px;
 }
 
-.PetProjects {
-display: flex; /* Flex layout for columns */
-z-index: 10;
-border-radius: 10px;
-line-height: 1.6;
-width: 150vh;
-height: auto;
+/* Slider container styling */
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 60%; /* Adjusted to be 20% smaller */
+  max-width: 100%; /* Ensure it does not overflow */
+  height: 400px; /* Adjusted to fit the compact design */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: filter 0.3s ease;
+  margin: 0 auto; /* Centers the slider container */
 }
 
-.a-title {
-margin-bottom: 30px;
-margin-top: 20px;
-width: auto;
-font-family: 'Inter', sans-serif;
-color: white;
-font-weight: bold;
-line-height: 1.2;
-font-size: 1.3rem;
-text-align: center;
+/* Slider content (image + text) */
+.slider-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
 }
 
-.column {
-transition: transform 0.3s ease; /* Smooth scaling effect for the entire column */
-box-shadow: 2px 3px 20px var(--secondary);
-flex: 1;
-margin: 0 25px;
-border-radius: 8px;
-padding: 20px;
-width: auto;
-height: auto;
-color: rgb(176, 176, 176);
-font-size: 1.6rem;
-font-family: NTR;
-font-weight: semi-bold;
-display: flex;
-flex-direction: column;
-align-items: center;
-
+/* Image container that holds both image and project-info */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Ensure the image container takes full height of the parent */
 }
 
+/* Styling for the project image */
+.slider-image {
+  width: 100%;
+  height: 75%; /* Adjusted to make the image a little smaller and compact */
+  object-fit: cover; /* Ensures the image fills its container without distortion */
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0); /* Slightly smaller shadow for compactness */
+  transition: filter 0.3s ease; /* Transition for image darkening effect */
+}
 
-.column:hover {
-transform: scale(1.05); /* Slightly enlarges the entire column on hover */
+/* Styling for project info (title, description, and link) */
+.project-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 18, 46, 0.845); /* Lighter grey background with transparency */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Hide initially */
+  visibility: hidden; /* Hide initially */
+  padding: 15px; /* Reduced padding for compactness */
+  border-radius: 10px;
+  transition: opacity 0.3s ease, visibility 0s 0.3s; /* Smooth transition for opacity */
+}
+
+/* Project Info Title */
+.project-info h3 {
+  font-size: 2rem; /* Reduced font size for a cute, compact title */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Project Info Description */
+.project-info p {
+  font-size: 1.2rem; /* Slightly smaller text for a compact design */
+  margin-bottom: 15px;
+  max-width: 80%; /* Adjusted to fit the smaller size */
+  text-align: center;
+}
+
+/* Project Info Button */
+.project-info a {
+  padding: 8px 16px;
+  background-color: var(--secondary); /* Using your CSS variable for buttons */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-info a:hover {
+  background-color: #0056b3; /* Slightly darker shade on hover */
+}
+
+/* Button styles for navigation */
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+/* Button hover effect */
+button.prev:hover, button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Hover effect for darkening the image and showing project info */
+.image-container:hover .slider-image {
+  filter: brightness(50%); /* Darken the image on hover */
+}
+
+.image-container:hover .project-info {
+  opacity: 1; /* Show the project info */
+  visibility: visible; /* Make it visible */
+  transition: opacity 0.3s ease, visibility 0s 0s; /* Smooth transition for opacity */
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 1170px) {
-.PetProjects-container {
-  width: 90%;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 20px;
-}
+  .pet-projects-slider h2 {
+    font-size: 2.1rem; /* Adjust title size for smaller screens */
+  }
 
-.tools {
-  flex-direction: column;
-  width: 100%;
-}
+  .slider-container {
+    width: 70%; /* Adjust width for smaller screens */
+    height: 350px; /* Adjust the height for smaller screens */
+    margin-bottom: 40px;
+    padding: 15px;
+  }
 
-.column {
-  margin: 10px 0;
-  width: 100%;
-  margin-bottom: 50px;
-}
+  .slider-content {
+    max-width: 90%;
+  }
 
-.PetProjects-title {
-  margin-top: 50px;
-  font-size: 2.5rem;
-}
+  .image-container {
+    max-width: 100%;
+    max-height: 300px;
+  }
+
+  .project-info {
+    width: 90%;
+    padding: 12px;
+  }
 }
 
 @media (max-width: 1000px) {
-.PetProjects-title {
-  font-size: 1.7rem;
-}
+  .slider-image {
+    max-height: 250px; /* Further adjust image size */
+  }
 
-.PetProjects-subtitle {
-  font-size: 0.8rem;
-}
+  .pet-projects-slider h2 {
+    font-size: 1.6rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.3rem; /* Make the title slightly smaller */
+  }
+
+  .project-info p {
+    font-size: 0.9rem; /* Smaller description text */
+  }
+
+  .project-info a {
+    font-size: 0.9rem; /* Adjust the button size */
+  }
 }
