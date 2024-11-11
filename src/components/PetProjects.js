@@ -72,7 +72,7 @@ const PetProjects = () => {
               <h3>{projects[currentIndex].title}</h3>
               <p>{projects[currentIndex].description}</p>
               <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer">
-                View Project
+                Github
               </a>
             </div>
           </div>
