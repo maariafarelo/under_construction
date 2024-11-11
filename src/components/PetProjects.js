@@ -11,7 +11,7 @@ const PetProjects = () => {
       title: 'Flappy Biene',
       description: `"Flappy Biene" is a Python game I developed to enhance my Python programming skills. Inspired by the classic 
        Flappy Bird, I put my own spin on it by incorporating my HackUPC organizer's avatar, my Biene, and adding a space-themed
-       twist to align with HackUPC 2024. This project was a great opportunity to practice Python while combining creativity with functionality.`,
+       twist to align with HackUPC2024. This project was a great opportunity to practice Python while combining creativity with functionality.`,
       imageUrl: FlappyBieneImage,
       link: 'https://github.com/maariafarelo/FlappyBiene'
     },
