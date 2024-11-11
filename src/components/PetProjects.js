@@ -48,7 +48,7 @@ const PetProjects = () => {
       // Clean up timeout if hovering
       return () => clearTimeout(timeoutId);
     }
-  }, [isHovered]);
+  }, [isHovered, handleNext]); // Add 'handleNext' as a dependency
 
   return (
     <div className="pet-projects-slider">
