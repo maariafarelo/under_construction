@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './PetProjects.css'; 
 import FlappyBieneImage from '../assets/FlappyBiene.png';
 
@@ -30,9 +30,10 @@ const PetProjects = () => {
     // Add more projects here
   ];
 
-  const handleNext = () => {
+  // Wrap the handleNext function with useCallback
+  const handleNext = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  };
+  }, [projects.length]); // Memoize the function, depends on projects.length
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
