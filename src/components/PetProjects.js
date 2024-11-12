@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './PetProjects.css'; 
 import FlappyBieneImage from '../assets/FlappyBiene.png';
+import Bizaway from '../assets/bizamaps.jpeg';
+import IFM from '../assets/IFM.png';
 
 const PetProjects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,18 +17,20 @@ const PetProjects = () => {
       imageUrl: FlappyBieneImage,
       link: 'https://github.com/maariafarelo/FlappyBiene'
     },
+  
     {
-      title: 'Project 2',
-      description: 'Description of Project 2',
-      imageUrl: 'path/to/project2-image.jpg',
-      link: 'https://example.com/project2'
+      title: 'Bizaway',
+      description: 'An optimization tool that minimizes CO2 emissions by organizing carpooling for employees attending a common destination, developed with Next.js and Flask.',
+      imageUrl: Bizaway,
+      link: 'https://github.com/maariafarelo/bizaway'
     },
     {
-      title: 'Project 3',
-      description: 'Description of Project 3',
-      imageUrl: 'path/to/project3-image.jpg',
-      link: 'https://example.com/project3'
-    },
+      title: 'HackEps2023',
+      description: 'A webapp that processes user feedback into actionable tasks for development teams, integrating React, Flask, PostgreSQL, and OpenAI API.',
+      imageUrl: IFM,
+      link: 'https://github.com/maariafarelo/HackEps2023'
+    }
+    
     // Add more projects here
   ];
 
