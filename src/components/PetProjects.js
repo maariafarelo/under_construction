@@ -6,58 +6,57 @@ import IFM from '../assets/IFM.png';
 
 const PetProjects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false); // Track hover state
+  const [isHovered, setIsHovered] = useState(false);
+  const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
 
   const projects = [
     {
       title: 'Flappy Biene',
-      description: `"Flappy Biene" is a Python game I developed to enhance my Python programming skills. Inspired by the classic 
-       Flappy Bird, I put my own spin on it by incorporating my HackUPC organizer's avatar, my Biene, and adding a space-themed
-       twist to align with HackUPC2024. This project was a great opportunity to practice Python while combining creativity with functionality.`,
+      description: `"Flappy Biene" is a Python game I developed to improve my programming skills, inspired by the popular Flappy Bird game. 
+      The game features a space-themed world with my HackUPC2024 avatar, a bee, as the character. It was an excellent way to practice Python 
+      while creating an interactive, fun game for players of all ages. This project challenged my logic and creativity, making it an engaging experience.`,
       imageUrl: FlappyBieneImage,
       link: 'https://github.com/maariafarelo/FlappyBiene'
     },
-  
     {
       title: 'Bizaway',
-      description: 'An optimization tool that minimizes CO2 emissions by organizing carpooling for employees attending a common destination, developed with Next.js and Flask.',
+      description: 'Bizaway is a sustainability-driven tool built with Next.js and Flask. It helps reduce CO2 emissions by suggesting carpooling options for employees traveling to the same destination. By optimizing travel routes in real-time, Bizaway ensures that business trips are both cost-effective and environmentally friendly. The project combines technology with eco-conscious solutions to make corporate travel more sustainable.',
       imageUrl: Bizaway,
       link: 'https://github.com/maariafarelo/bizaway'
     },
     {
       title: 'HackEps2023',
-      description: 'A webapp that processes user feedback into actionable tasks for development teams, integrating React, Flask, PostgreSQL, and OpenAI API.',
+      description: 'HackEps2023 is a platform that enables development teams to collect and analyze feedback from users. The application helps teams prioritize and tackle tasks by transforming feedback into actionable insights using technologies like React, Flask, PostgreSQL, and OpenAI API. This project aims to improve workflow efficiency, ensuring developers can stay focused on high-impact work.',
       imageUrl: IFM,
       link: 'https://github.com/maariafarelo/HackEps2023'
     }
-    
-    // Add more projects here
   ];
 
-  // Wrap the handleNext function with useCallback
   const handleNext = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  }, [projects.length]); // Memoize the function, depends on projects.length
+  }, [projects.length]);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
   };
 
-  // Set a timeout to change to the next project if not hovered for 5 seconds
   useEffect(() => {
     if (!isHovered) {
       const timeoutId = setTimeout(() => {
         handleNext();
-      }, 5000); // Change after 5 seconds
+      }, 5000);
 
-      // Clean up timeout if hovering
       return () => clearTimeout(timeoutId);
     }
-  }, [isHovered, handleNext]); // Add 'handleNext' as a dependency
+  }, [isHovered, handleNext]);
+
+  const toggleDescription = () => {
+    setIsDescriptionVisible(!isDescriptionVisible);
+  };
 
   return (
     <div className="pet-projects-slider">
-      <h2>some of my pet projects</h2>
+      <h2>Some of My Pet Projects</h2>
       <div className="slider-container">
         <button className="prev" onClick={handlePrev}>
           &#10094;
@@ -65,8 +64,8 @@ const PetProjects = () => {
         <div className="slider-content">
           <div
             className="image-container"
-            onMouseEnter={() => setIsHovered(true)} // Set hover state to true
-            onMouseLeave={() => setIsHovered(false)} // Set hover state to false
+            onMouseEnter={() => setIsHovered(true)} 
+            onMouseLeave={() => setIsHovered(false)} 
           >
             <img
               src={projects[currentIndex].imageUrl}
@@ -75,10 +74,13 @@ const PetProjects = () => {
             />
             <div className="project-info">
               <h3>{projects[currentIndex].title}</h3>
-              <p>{projects[currentIndex].description}</p>
+              <p>{isDescriptionVisible ? projects[currentIndex].description : null}</p>
               <a href={projects[currentIndex].link} target="_blank" rel="noopener noreferrer">
                 Github
               </a>
+              <button className="show-more-button" onClick={toggleDescription}>
+                {isDescriptionVisible ? '-' : '+'}
+              </button>
             </div>
           </div>
         </div>
