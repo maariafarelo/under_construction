@@ -1,0 +1,34 @@
+/* Footer container */
+.footer {
+  background-color: var(--background); /* Dark background color */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Footer links and icons */
+.footer-links {
+  display: flex;
+  gap: 15px; /* Space between icons */
+  font-size: 1.5rem; /* Icon size */
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--secondary); /* Hover color */
+}
+
+/* Footer text */
+.footer-text {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}

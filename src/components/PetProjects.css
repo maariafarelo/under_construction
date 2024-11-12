@@ -1,6 +1,7 @@
 /* Base styling */
 .pet-projects {
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   margin-bottom: 80px;

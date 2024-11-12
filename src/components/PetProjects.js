@@ -19,8 +19,8 @@ const PetProjects = () => {
       link: 'https://github.com/maariafarelo/bizaway'
     },
     {
-      title: 'HackEps2023',
-      description: 'HackEps2023 is a platform where teams can collect and analyze user feedback, using technologies like React and Flask. It transforms feedback into insights, helping developers prioritize tasks and stay focused on high-impact work.',
+      title: 'IFM',
+      description: 'IFM is a platform where teams can collect and analyze user feedback, using technologies like React and Flask. It transforms feedback into insights, helping developers prioritize tasks and stay focused on high-impact work.',
       imageUrl: IFM,
       link: 'https://github.com/maariafarelo/HackEps2023'
     }

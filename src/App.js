@@ -4,7 +4,9 @@ import Intro from "./components/Intro";
 import AboutMe from "./components/About";
 import Tools from "./components/Tools";
 import PetProjects from "./components/PetProjects"
-import CustomCursor from "./components/CustomCursor"; // Ensure this path is correct
+import Footer from "./components/Footer"
+import CustomCursor from "./components/CustomCursor"; 
+
 import "./global.css";
 
 function App() {
@@ -36,6 +38,7 @@ function App() {
       <AboutMe/>
       <Tools/>
       <PetProjects/>
+      <Footer/>
       <CustomCursor />
     </div>
   );
