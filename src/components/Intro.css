@@ -21,43 +21,43 @@
 /* Intro text styles */
 .intro-myname {
   color: #e5e5e5a9;
-  font-size: 1rem; /* Further reduced size for my name */
+  font-size: 1rem;
   font-family: 'Inter', sans-serif;
-  font-weight: bold; /* Ensure it's not bold */
-  text-align: left; /* Align text to the left for larger devices */
+  font-weight: bold;
+  text-align: left;
 }
 
 .intro-title {
   color: var(--secondary);
-  font-size: 4rem; /* Reduced size */
+  font-size: 4rem;
   font-family: 'Inter', sans-serif;
-  text-align: left; /* Align title to the left for larger devices */
+  text-align: left;
 }
 
 .intro-description {
   color: #e5e5e5;
-  font-size: 1.5rem; /* Reduced size */
+  font-size: 1.5rem;
   font-family: 'NTR', sans-serif;
 }
 
 /* Contact buttons */
 .contact-buttons {
-  display: flex; /* Keep the buttons in a row */
-  gap: 10px; /* Space between buttons */
-  justify-content: center; /* Center buttons within their container */
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
 .contact-button, .cv-button {
   display: inline-block;
   margin-top: 20px;
-  padding: 12px 24px; /* Increased padding for bigger buttons */
+  padding: 12px 24px;
   color: white;
   background-color: transparent;
   border: 2px solid #488db2;
   border-radius: 5px;
   text-decoration: none;
   font-family: 'Inter', sans-serif;
-  font-size: 0.9rem; /* Slightly larger button font size */
+  font-size: 0.9rem;
   font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
@@ -70,101 +70,98 @@
 
 /* Profile image section */
 .intro-image {
-  width: 40%; /* Controls the width of the image section */
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .profile-image {
-  width: 100%;
-  max-width: 350px; /* Keeps image size consistent */
-  height: auto;
-  border-radius: 10px;
+  aspect-ratio: 1 / 1;
+  width: 180px; /* Maintain 1:1 aspect ratio for a perfect circle */
+  border-radius: 50%; /* Circle effect */
+  object-fit: cover; /* Ensure the image fills the circle */
   box-shadow: 0 4px 20px rgba(109, 202, 255, 0.5);
-  transition: transform 0.3s ease, width 0.3s ease;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
 }
+
 
 .profile-image:hover {
   transform: scale(1.1);
 }
 
 /* Responsive adjustments */
-@media (min-width: 1171px) { /* Increase font sizes for larger devices */
+@media (min-width: 1171px) {
   .intro-myname {
-    font-size: 1rem; /* Reduced size */
+    font-size: 1rem;
   }
 
   .intro-title {
-    font-size: 4rem; /* Consistent size */
+    font-size: 4rem;
   }
 
   .intro-description {
-    font-size: 1.5rem; /* Consistent size */
+    font-size: 1.5rem;
   }
 
-  /* Center buttons to the left */
   .contact-buttons {
-    justify-content: flex-start; /* Align buttons to the left */
-    width: 100%; /* Allow buttons to take full width for alignment */
+    justify-content: flex-start;
+    width: 100%;
   }
 
   .profile-image {
     max-width: 400px; 
-    width: 100%;/* Make the image smaller on small devices */
+    width: 100%;
   }
 
   .contact-button, .cv-button {
-    font-size: 1.2rem; /* Consistent button font size */
-    padding: 12px 24px; /* Consistent padding */
+    font-size: 1.2rem;
+    padding: 12px 24px;
   }
 }
 
 @media (max-width: 1170px) {
   .intro-container {
-    
-    flex-direction: column; /* Stack sections vertically */
+    flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 0;
-    width: 90vw; /* Make the container responsive */
-    height: auto; /* Allow height to adjust */
+    width: 90vw;
+    height: auto;
   }
 
-  /* Center text on smaller devices */
   .intro-myname {
-    text-align: center; /* Center text for smaller devices */
+    text-align: center;
   }
 
   .intro-title {
-    text-align: center; /* Center text for smaller devices */
-    font-size: 3rem; /* Reduced size for smaller screens */
+    text-align: center;
+    font-size: 3rem;
   }
 
   .intro-description {
-    font-size: 1.2rem; /* Reduced size */
+    font-size: 1.2rem;
   }
 
-  /* Adjust contact buttons layout for smaller devices */
   .contact-buttons {
-    flex-direction: row; /* Keep buttons side by side */
-    align-items: center; /* Center buttons vertically */
-    justify-content: center; /* Center buttons within their container */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   .contact-button, .cv-button {
     width: 100%;
-    max-width: 150px; /* Set a maximum width for buttons to fit smaller screens */
+    max-width: 150px;
   }
 
   .profile-image {
     margin-top: 10%;
-    max-width: 100%; /* Make the image smaller on small devices */
+    max-width: 100%;
   }
 }
 
 @media (max-width: 850px) {
-
   .intro {
     flex-direction: column; 
     align-items: center;
@@ -182,37 +179,32 @@
     height: 1400px;
   }
 
-  /* Center text on smaller devices */
   .intro-myname {
     align-content: center;
     margin-top: 30px;
   }
 
   .intro-title {
-     /* Center text for smaller devices */
-    font-size: 1.6rem; /* Reduced size for smaller screens */
-
+    font-size: 1.6rem;
   }
 
   .intro-description {
-    font-size: 1.2rem; /* Reduced size */
-    font-display: none;
+    font-size: 1.2rem;
     margin-top: 10px;
     line-height: 1.2;
   }
 
-  /* Adjust contact buttons layout for smaller devices */
   .contact-buttons {
     margin-top: 5px;
-    flex-direction: row; /* Keep buttons side by side */
-    align-items: center; /* Center buttons vertically */
-    justify-content: center; /* Center buttons within their container */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   .profile-image {
-    margin-top: 10%; /* Maintain margin above the image */
-    max-width: 300%; /* Ensure the image can take full width */
-    width: 250px; /* Set a fixed width for the image on small devices */
+    margin-top: 10%;
+    max-width: 300%;
+    width: 250px;
   }
   .contact-button, .cv-button {
     width: 100%;
