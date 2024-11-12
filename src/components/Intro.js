@@ -1,4 +1,4 @@
-import profileImage from '../assets/logo.png'; 
+import profileImage from '../assets/foto.jpeg'; 
 import curriculum from '../assets/CV.pdf'; 
 import React from 'react';
 import './Intro.css'; 
