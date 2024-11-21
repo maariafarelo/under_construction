@@ -1,12 +1,8 @@
-<<<<<<< HEAD
+[mariafarelo.com](https://mariafarelo.com/)
 
-Branch where I'm working on my portfolio, go to Deploy branch to see my  website! [mariafarelo.com](https://mariafarelo.com/)
-=======
 # Maria Farelo Iglesias
-=======
 # My Portfolio - Maria Farelo
 ![Screenshot_20241112_222635](https://github.com/user-attachments/assets/67f85e5f-6012-4ab9-9b28-37d546a029d9)
->>>>>>> deploy
 
 
 Welcome to my personal portfolio! This project showcases my journey as a web development student, highlighting some of my skills, projects, and the technologies I am learning. You can view the live version of my portfolio at [mariafarelo.com](https://mariafarelo.com/).
