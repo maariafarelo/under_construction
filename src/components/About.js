@@ -8,7 +8,7 @@ function AboutMe() {
       <div className="about">
         <h2 className="about-title">about me</h2>
         <p className="centered-text">
-          I’m a 20-year-old <span className="highlight"> Informatics Engineering student </span> 
+          I am a 20-year-old <span className="highlight"> Informatics Engineering student </span> 
           based in Barcelona, passionate about coding and continuous learning. I love diving 
           into various programming languages like <span className="highlight">Python, Java,
           Javascript or C++ </span> and I am always eager to stay updated on the latest trends in software 
@@ -23,7 +23,7 @@ function AboutMe() {
         <p className="centered-text">
           In my free time, you can find me getting lost in a good book,travelling, or relaxing at
            the beach. Whether I'm coding, organizing events, or exploring new places,
-            <span className="highlight"> I’m always looking to grow and connect with others
+            <span className="highlight"> I am always looking to grow and connect with others
                in the tech community</span>.
         </p>
       </div>
