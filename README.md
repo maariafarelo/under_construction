@@ -1,5 +1,4 @@
-
-Branch where I'm working on my portfolio, go to Deploy branch to see my  website! [mariafarelo.com](https://mariafarelo.com/)
+[mariafarelo.com](https://mariafarelo.com/)
 
 # Maria Farelo Iglesias
 # My Portfolio - Maria Farelo
