@@ -11,7 +11,7 @@ function AboutMe() {
           I’m a 20-year-old <span className="highlight"> Informatics Engineering student </span> 
           based in Barcelona, passionate about coding and continuous learning. I love diving 
           into various programming languages like <span className="highlight">Python, Java,
-          Javascript or C++ </span> and I’m always eager to stay updated on the latest trends in software 
+          Javascript or C++ </span> and I am always eager to stay updated on the latest trends in software 
           development.
         </p>
         <p className="centered-text">
