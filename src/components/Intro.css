@@ -3,10 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 70vw; /* Set the width to 70% of the viewport width */
-  height: 45vw; /* Set the height to 45% of the viewport width for landscape */
+  width: 100%; /* Set the width to 70% of the viewport width */
+  height: 800px;
   max-width: 1200px; /* Optional: Limit the max width */
-  max-height: 675px; /* Optional: Limit the max height */
+  max-height: 1000px;
   margin: auto; /* Center the container horizontally */
   padding: 20px;
   border-radius: 15px; /* Optional: Add rounded corners */
