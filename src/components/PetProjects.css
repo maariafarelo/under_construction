@@ -123,11 +123,7 @@
 
 @media (max-width: 600px) {
   .pet-projects h2 {
-<<<<<<< HEAD
-    font-size: 1.8rem;
-=======
     font-size: 1.6rem;
->>>>>>> deploy
   }
 
   .project-info h3 {
