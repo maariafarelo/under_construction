@@ -1,7 +1,7 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaEnvelope, FaFileDownload, FaCode } from "react-icons/fa";
 import "./Footer.css";
-import curriculum from '../assets/FInal_CV.pdf'; 
+import curriculum from '../assets/CV.pdf'; 
 
 const Footer = () => {
   return (
