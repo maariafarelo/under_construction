@@ -22,7 +22,7 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Narrower width */
   gap: 20px;
   width: 80%;
-  max-width: 1000px; /* Limit max width for compact layout */
+  max-width: 1400px; /* Limit max width for compact layout */
 }
 
 /* Card styling */
