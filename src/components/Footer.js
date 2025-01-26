@@ -32,7 +32,7 @@ const Footer = () => {
             <FaCode />
           </a>
         </div>
-        <p className="footer-text">© 2024 Maria Farelo Iglesias</p>
+        <p className="footer-text">© 2025 Maria Farelo Iglesias</p>
       </div>
     </footer>
   );
